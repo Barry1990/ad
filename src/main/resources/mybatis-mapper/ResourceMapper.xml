@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gxq.mapper.ResourceMapper">
+
+    <insert id="insert" parameterType="ResourceModel" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_resource (name,title,type,address,state,time,note,is_delete,create_one,create_time)
+        VALUES(#{name},#{title},#{type},#{address},'0',#{time},#{note},'0',#{createOne},SYSDATE())
+    </insert>
+
+    <update id="delete" parameterType="java.lang.Long">
+        UPDATE t_resource SET is_delete = '1'  WHERE id = #{id}
+    </update>
+
+    <update id="update" parameterType="ResourceModel">
+        UPDATE t_resource
+        SET <if test="name!=null"> name = #{name}, </if>
+        <if test="title!=null">title = #{title}, </if>
+        <if test="type!=null">type = #{type}, </if>
+        <if test="address!=null">address = #{address}, </if>
+        <if test="time!=null"> time = #{time}, </if>
+        <if test="note!=null"> note = #{note}, </if>
+        <if test="updateOne!=null"> update_one = #{updateOne}, </if>
+        update_time = SYSDATE()
+        WHERE id = #{id}
+    </update>
+
+    <update id="updateState" parameterType="ResourceModel">
+        UPDATE t_resource
+        SET state = #{state}
+        WHERE id = #{id}
+    </update>
+
+    <select id="selectAll" parameterType="ResourceSearchModel" resultMap="resourceMap">
+        SELECT id,name,title,state,type,address,note,create_time
+        FROM t_resource
+        WHERE is_delete = '0'
+        <if test="name!=null"> AND name LIKE #{name} OR note LIKE #{name} </if>
+        <if test="startTime!=null"><![CDATA[ AND create_time > #{startTime}]]> </if>
+        <if test="endTime!=null"><![CDATA[ AND create_time < #{endTime}]]> </if>
+    </select>
+
+    <resultMap type="com.gxq.model.ResourceModel" id="resourceMap">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="title" column="title"/>
+        <result property="time" column="time"/>
+        <result property="state" column="state"/>
+        <result property="type" column="type"/>
+        <result property="address" column="address"/>
+        <result property="note" column="note"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+</mapper>
