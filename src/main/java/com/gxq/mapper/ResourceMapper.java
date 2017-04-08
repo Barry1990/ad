@@ -21,5 +21,5 @@ public interface ResourceMapper {
 
     List<ResourceModel> selectAll(ResourceSearchModel model);
 
-    Long delete(Long id);
+    Long delete(List list);
 }

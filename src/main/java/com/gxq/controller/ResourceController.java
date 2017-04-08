@@ -9,6 +9,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.util.List;
+
 /**
  * Created by xuenianxiang on 2017/4/7.
  */
@@ -35,8 +37,9 @@ public class ResourceController {
     }
 
     @RequestMapping(value = "/delete",method = RequestMethod.POST)
-    public ModelMap delete(@RequestParam Long resourceId){
-        return resourceService.delete(resourceId);
+    public ModelMap delete(@RequestParam List list){
+
+        return resourceService.delete(list);
     }
 
     @RequestMapping(value = "/update",method = RequestMethod.POST)

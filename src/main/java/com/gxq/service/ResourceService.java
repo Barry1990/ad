@@ -44,14 +44,14 @@ public class ResourceService {
 
     /**
      * 删除广告资源
-     * @param id
+     * @param list
      * @return
      */
-    public ModelMap delete(Long id){
+    public ModelMap delete(List list){
 
         ModelMap result = new ModelMap();
 
-        if (resourceMapper.delete(id) > 0){
+        if (resourceMapper.delete(list) > 0){
             result.put("result", "1");
             result.put("errorMsg", "删除成功!");
         }else {

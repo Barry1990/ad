@@ -10,8 +10,12 @@
         VALUES(#{name},#{title},#{type},#{address},'0',#{time},#{note},'0',#{createOne},SYSDATE())
     </insert>
 
-    <update id="delete" parameterType="java.lang.Long">
-        UPDATE t_resource SET is_delete = '1'  WHERE id = #{id}
+    <update id="delete" parameterType="java.util.List">
+        UPDATE t_resource SET is_delete = '1'
+        where id in
+        <foreach separator="," index="index" item="item" collection="list" close=")" open="(">
+            #{item}
+        </foreach>
     </update>
 
     <update id="update" parameterType="ResourceModel">
