@@ -71,7 +71,7 @@ public class ResourceService {
 
         ModelMap result = new ModelMap();
 
-        if (resourceModel.getType().equals("2") ){
+        if (resourceModel.getType()==2){
 
             if (resourceModel.getTime() == null){
                 result.put("result", "0");
@@ -101,7 +101,7 @@ public class ResourceService {
         ModelMap result = new ModelMap();
 
         //校验
-        if (!"01".contains(resourceModel.getState())){
+        if (resourceModel.getState() != 0 && resourceModel.getState() != 1){
             result.put("result", "0");
             result.put("errorMsg", "状态有误!");
             return result;
@@ -156,4 +156,25 @@ public class ResourceService {
 
         return pageModel;
     }
+
+
+    public ModelMap selectById(Long id) {
+
+        ModelMap result = new ModelMap();
+
+        ResourceModel model = resourceMapper.selectById(id);
+
+        if (model != null){
+            result.put("result", "1");
+            result.put("errorMsg", "获取成功!");
+            result.put("data", model);
+        }else {
+            result.put("result", "1");
+            result.put("errorMsg", "获取失败!");
+        }
+
+        return result;
+    }
+
+
 }

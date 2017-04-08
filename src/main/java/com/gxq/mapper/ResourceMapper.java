@@ -4,6 +4,7 @@ import com.gxq.model.ResourceModel;
 import com.gxq.model.ResourceSearchModel;
 import org.apache.ibatis.annotations.Mapper;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -20,6 +21,8 @@ public interface ResourceMapper {
     int updateState(ResourceModel resourceModel);
 
     List<ResourceModel> selectAll(ResourceSearchModel model);
+
+    ResourceModel selectById(Long id);
 
     Long delete(List list);
 }

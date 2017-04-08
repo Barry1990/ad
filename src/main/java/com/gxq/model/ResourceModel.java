@@ -13,9 +13,9 @@ public class ResourceModel implements Serializable {
 
     private String title;
 
-    private String state;
+    private int state;
 
-    private String type;
+    private int type;
 
     private String address;
 
@@ -57,19 +57,19 @@ public class ResourceModel implements Serializable {
         this.title = title;
     }
 
-    public String getState() {
+    public int getState() {
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(int state) {
         this.state = state;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
