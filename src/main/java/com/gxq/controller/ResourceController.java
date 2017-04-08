@@ -1,8 +1,6 @@
 package com.gxq.controller;
 
-import com.gxq.model.PageModel;
-import com.gxq.model.ResourceModel;
-import com.gxq.model.ResourceSearchModel;
+import com.gxq.model.*;
 import com.gxq.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -37,13 +35,13 @@ public class ResourceController {
     }
 
     @RequestMapping(value = "/detail",method = RequestMethod.POST)
-    public ModelMap detail(@RequestParam Long id){
+    public ModelMap detail(@RequestBody Long id){
         return resourceService.selectById(id);
     }
 
     @RequestMapping(value = "/delete",method = RequestMethod.POST)
-    public ModelMap delete(@RequestParam List list){
-        return resourceService.delete(list);
+    public ModelMap delete(@RequestBody BatchModel model){
+        return resourceService.delete(model.getList());
     }
 
     @RequestMapping(value = "/update",method = RequestMethod.POST)
@@ -52,11 +50,9 @@ public class ResourceController {
     }
 
     @RequestMapping(value = "/updateState",method = RequestMethod.POST)
-    public ModelMap updateState(@RequestParam Long resourceId,@RequestParam int state){
-        ResourceModel model = new ResourceModel();
-        model.setId(resourceId.intValue());
-        model.setState(state);
+    public ModelMap updateState(@RequestBody ChangeStateModel model){
         return resourceService.updateState(model);
     }
+
 
 }

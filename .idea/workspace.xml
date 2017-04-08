@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1849f6ce-3bb7-49a1-9b6d-a54c797b8b02" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/model/BatchModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/model/ChangeStateModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/model/ResourceModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/model/ResourceModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/service/ResourceService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/service/ResourceService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml" />
     </list>
@@ -19,16 +21,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ResourceController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ResourceController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            <state relative-caret-position="253">
+              <caret line="52" column="61" lean-forward="false" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="61" />
               <folding>
-                <element signature="e#1246#1247#0" expanded="true" />
-                <element signature="e#1299#1300#0" expanded="true" />
-                <element signature="e#1420#1421#0" expanded="true" />
-                <element signature="e#1471#1472#0" expanded="true" />
+                <element signature="e#1159#1160#0" expanded="true" />
+                <element signature="e#1212#1213#0" expanded="true" />
+                <element signature="e#1339#1340#0" expanded="true" />
+                <element signature="e#1401#1402#0" expanded="true" />
+                <element signature="e#1742#1743#0" expanded="true" />
+                <element signature="e#1799#1800#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BatchModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/BatchModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#226#227#0" expanded="true" />
+                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#291#292#0" expanded="true" />
+                <element signature="e#323#324#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/PageModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -119,19 +139,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResourceMapper.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ResourceMapper.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="26" />
+            <state relative-caret-position="25">
+              <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
               <folding>
-                <marker date="1491638216000" expanded="true" signature="321:517" ph="INSERT INTO t_resource... " />
-                <marker date="1491638216000" expanded="true" signature="597:788" ph="UPDATE t_res... " />
-                <marker date="1491638216000" expanded="true" signature="867:1341" ph="UPDATE t_res... " />
-                <marker date="1491638216000" expanded="true" signature="1425:1496" ph="UPDATE t_res... " />
-                <marker date="1491638216000" expanded="true" signature="1608:1955" ph="SELECT id,na... t_resource" />
-                <marker date="1491638216000" expanded="true" signature="2072:2182" ph="SELECT id,na... t_resource" />
-                <marker date="1491638216000" expanded="true" signature="2072:2197" ph="SELECT id,na... t_resource" />
+                <marker date="1491644093000" expanded="true" signature="321:517" ph="INSERT INTO t_resource... " />
+                <marker date="1491644093000" expanded="true" signature="597:788" ph="UPDATE t_res... " />
+                <marker date="1491644093000" expanded="true" signature="867:1341" ph="UPDATE t_res... " />
+                <marker date="1491644093000" expanded="true" signature="1428:1492" ph="UPDATE t_res... " />
+                <marker date="1491644093000" expanded="true" signature="1740:2087" ph="SELECT id,na... t_resource" />
+                <marker date="1491644093000" expanded="true" signature="2204:2314" ph="SELECT id,na... t_resource" />
+                <marker date="1491644093000" expanded="true" signature="2204:2329" ph="SELECT id,na... t_resource" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeStateModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/ChangeStateModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#256#257#0" expanded="true" />
+                <element signature="e#283#284#0" expanded="true" />
+                <element signature="e#321#322#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#410#411#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+                <element signature="e#483#484#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,8 +180,8 @@
       <file leaf-file-name="ResourceMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="223">
+              <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -150,8 +190,8 @@
       <file leaf-file-name="ResourceService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/ResourceService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="169" column="19" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+            <state relative-caret-position="249">
+              <caret line="110" column="44" lean-forward="false" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -179,10 +219,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/CorsConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/ResourceModel.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/ResourceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/BatchModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/ChangeStateModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/ResourceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml" />
       </list>
     </option>
   </component>
@@ -885,12 +927,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491630598319</updated>
-      <workItem from="1491630600886" duration="5009000" />
+      <workItem from="1491630600886" duration="8104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5009000" />
+    <option name="totallyTimeSpent" value="8104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="84" y="23" width="1356" height="877" extended-state="0" />
@@ -937,7 +979,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -953,14 +1003,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/PageModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1025,47 +1067,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/PageModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="26" />
+        <state relative-caret-position="105">
+          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/BatchModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding>
-            <marker date="1491638216000" expanded="true" signature="321:517" ph="INSERT INTO t_resource... " />
-            <marker date="1491638216000" expanded="true" signature="597:788" ph="UPDATE t_res... " />
-            <marker date="1491638216000" expanded="true" signature="867:1341" ph="UPDATE t_res... " />
-            <marker date="1491638216000" expanded="true" signature="1425:1496" ph="UPDATE t_res... " />
-            <marker date="1491638216000" expanded="true" signature="1608:1955" ph="SELECT id,na... t_resource" />
-            <marker date="1491638216000" expanded="true" signature="2072:2182" ph="SELECT id,na... t_resource" />
-            <marker date="1491638216000" expanded="true" signature="2072:2197" ph="SELECT id,na... t_resource" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/ChangeStateModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/ResourceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="169" column="19" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="253">
+          <caret line="52" column="61" lean-forward="false" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="61" />
           <folding>
-            <element signature="e#1246#1247#0" expanded="true" />
-            <element signature="e#1299#1300#0" expanded="true" />
-            <element signature="e#1420#1421#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
+            <element signature="e#1339#1340#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+            <element signature="e#1742#1743#0" expanded="true" />
+            <element signature="e#1799#1800#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/ResourceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="110" column="44" lean-forward="false" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding>
+            <marker date="1491644093000" expanded="true" signature="321:517" ph="INSERT INTO t_resource... " />
+            <marker date="1491644093000" expanded="true" signature="597:788" ph="UPDATE t_res... " />
+            <marker date="1491644093000" expanded="true" signature="867:1341" ph="UPDATE t_res... " />
+            <marker date="1491644093000" expanded="true" signature="1428:1492" ph="UPDATE t_res... " />
+            <marker date="1491644093000" expanded="true" signature="1740:2087" ph="SELECT id,na... t_resource" />
+            <marker date="1491644093000" expanded="true" signature="2204:2314" ph="SELECT id,na... t_resource" />
+            <marker date="1491644093000" expanded="true" signature="2204:2329" ph="SELECT id,na... t_resource" />
           </folding>
         </state>
       </provider>

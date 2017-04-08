@@ -3,6 +3,7 @@ package com.gxq.service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.gxq.mapper.ResourceMapper;
+import com.gxq.model.ChangeStateModel;
 import com.gxq.model.PageModel;
 import com.gxq.model.ResourceModel;
 import com.gxq.model.ResourceSearchModel;
@@ -93,21 +94,21 @@ public class ResourceService {
 
     /**
      * 更新状态(发布、未发布)
-     * @param resourceModel
+     * @param model
      * @return
      */
-    public ModelMap updateState(ResourceModel resourceModel){
+    public ModelMap updateState(ChangeStateModel model){
 
         ModelMap result = new ModelMap();
 
         //校验
-        if (resourceModel.getState() != 0 && resourceModel.getState() != 1){
+        if (model.getState() != 0 && model.getState() != 1){
             result.put("result", "0");
             result.put("errorMsg", "状态有误!");
             return result;
         }
 
-        if (resourceMapper.updateState(resourceModel) > 0){
+        if (resourceMapper.updateState(model) > 0){
             result.put("result", "1");
             result.put("errorMsg", "更新成功!");
         }else {

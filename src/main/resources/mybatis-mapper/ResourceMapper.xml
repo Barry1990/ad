@@ -31,10 +31,13 @@
         WHERE id = #{id}
     </update>
 
-    <update id="updateState" parameterType="ResourceModel">
+    <update id="updateState" parameterType="ChangeStateModel">
         UPDATE t_resource
         SET state = #{state}
-        WHERE id = #{id}
+        WHERE id in
+        <foreach separator="," index="index" item="item" collection="list" close=")" open="(">
+            #{item}
+        </foreach>
     </update>
 
     <select id="selectAll" parameterType="ResourceSearchModel" resultMap="resourceMap">

@@ -1,5 +1,6 @@
 package com.gxq.mapper;
 
+import com.gxq.model.ChangeStateModel;
 import com.gxq.model.ResourceModel;
 import com.gxq.model.ResourceSearchModel;
 import org.apache.ibatis.annotations.Mapper;
@@ -18,7 +19,7 @@ public interface ResourceMapper {
 
     int update(ResourceModel resourceModel);
 
-    int updateState(ResourceModel resourceModel);
+    int updateState(ChangeStateModel model);
 
     List<ResourceModel> selectAll(ResourceSearchModel model);
 
