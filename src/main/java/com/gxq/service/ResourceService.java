@@ -9,6 +9,7 @@ import com.gxq.model.ResourceModel;
 import com.gxq.model.ResourceSearchModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 
 import java.util.List;
@@ -28,6 +29,7 @@ public class ResourceService {
      * @param resourceModel
      * @return
      */
+    @Transactional
     public ModelMap insert(ResourceModel resourceModel){
 
         ModelMap result = new ModelMap();
@@ -48,6 +50,7 @@ public class ResourceService {
      * @param list
      * @return
      */
+    @Transactional
     public ModelMap delete(List list){
 
         ModelMap result = new ModelMap();
@@ -68,6 +71,7 @@ public class ResourceService {
      * @param resourceModel
      * @return
      */
+    @Transactional
     public ModelMap update(ResourceModel resourceModel){
 
         ModelMap result = new ModelMap();
@@ -97,6 +101,7 @@ public class ResourceService {
      * @param model
      * @return
      */
+    @Transactional
     public ModelMap updateState(ChangeStateModel model){
 
         ModelMap result = new ModelMap();
@@ -105,6 +110,12 @@ public class ResourceService {
         if (model.getState() != 0 && model.getState() != 1){
             result.put("result", "0");
             result.put("errorMsg", "状态有误!");
+            return result;
+        }
+
+        if (model.getList().isEmpty()){
+            result.put("result", "0");
+            result.put("errorMsg", "list 不能为空!");
             return result;
         }
 
@@ -197,7 +208,11 @@ public class ResourceService {
         return pageModel;
     }
 
-
+    /**
+     * 获取资源信息
+     * @param id
+     * @return
+     */
     public ModelMap selectById(Long id) {
 
         ModelMap result = new ModelMap();
@@ -215,6 +230,5 @@ public class ResourceService {
 
         return result;
     }
-
 
 }

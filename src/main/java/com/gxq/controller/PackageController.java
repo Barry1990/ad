@@ -1,8 +1,6 @@
 package com.gxq.controller;
 
-import com.gxq.model.IdModel;
-import com.gxq.model.PackageModel;
-import com.gxq.model.ResourceModel;
+import com.gxq.model.*;
 import com.gxq.service.PackageService;
 import com.gxq.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +22,26 @@ public class PackageController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ModelMap add(@RequestBody PackageModel packageModel) {
-
         return packageService.insert(packageModel);
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public ModelMap delete(BatchModel model){
+        return packageService.delete(model.getList());
     }
 
     @RequestMapping(value = "/detail",method = RequestMethod.POST)
     public ModelMap detail(@RequestBody IdModel model){
         return packageService.selectById(model.getId());
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public ModelMap update(@RequestBody PackageModel packageModel){
+        return packageService.update(packageModel);
+    }
+
+    @RequestMapping(value = "/updateState",method = RequestMethod.POST)
+    public ModelMap updateState(@RequestBody ChangeStateModel model){
+        return packageService.updateState(model);
     }
 }

@@ -7,7 +7,7 @@
 
     <insert id="insertPackage" parameterType="PackageModel" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO t_package (name,title,state,note,is_delete,create_one,create_time)
-        VALUES(#{name},#{title},0,#{note},'0',#{createOne},SYSDATE())
+        VALUES(#{name},#{title},#{state},#{note},'0',#{createOne},SYSDATE())
     </insert>
     
     <insert id="insertPackage_Resource" parameterType="PackageModel">
@@ -17,6 +17,38 @@
          (#{id},#{item},#{index},#{createOne},SYSDATE())
         </foreach>
     </insert>
+
+    <update id="updatePackage" parameterType="PackageModel">
+        UPDATE t_package
+        SET <if test="name!=null"> name = #{name}, </if>
+        <if test="title!=null">title = #{title}, </if>
+        <if test="note!=null"> note = #{note}, </if>
+        <if test="state!=null"> state = #{state}, </if>
+        <if test="updateOne!=null"> update_one = #{updateOne}, </if>
+        update_time = SYSDATE()
+        WHERE id = #{id} and is_delete = '0'
+    </update>
+
+    <update id="deletePackage" parameterType="java.util.List">
+        UPDATE t_package SET is_delete = '1'
+        where id in
+        <foreach separator="," index="index" item="item" collection="list" close=")" open="(">
+            #{item}
+        </foreach>
+    </update>
+
+    <update id="updateState" parameterType="ChangeStateModel">
+        UPDATE t_package
+        SET state = #{state}
+        WHERE id in
+        <foreach separator="," index="index" item="item" collection="list" close=")" open="(">
+            #{item}
+        </foreach>
+    </update>
+
+    <delete id="deletePackage_Resource" parameterType="java.lang.Long">
+        DELETE FROM t_package_resource WHERE p_id = #{id}
+    </delete>
 
     <select id="selectPackageById" parameterType="java.lang.Long" resultMap="packageMap">
         SELECT id,name,title,state,note,create_time
@@ -32,7 +64,5 @@
         <result property="state" column="state"/>
         <result property="createTime" column="create_time"/>
     </resultMap>
-
-
 
 </mapper>
