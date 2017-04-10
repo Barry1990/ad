@@ -43,8 +43,8 @@ public class ResourceController {
     }
 
     @RequestMapping(value = "/detail",method = RequestMethod.POST)
-    public ModelMap detail(@RequestParam Long id){
-        return resourceService.selectById(id);
+    public ModelMap detail(@RequestBody IdModel model){
+        return resourceService.selectById(model.getId());
     }
 
     @RequestMapping(value = "/delete",method = RequestMethod.POST)

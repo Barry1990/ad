@@ -1,5 +1,6 @@
 package com.gxq.controller;
 
+import com.gxq.model.IdModel;
 import com.gxq.model.PackageModel;
 import com.gxq.model.ResourceModel;
 import com.gxq.service.PackageService;
@@ -28,7 +29,7 @@ public class PackageController {
     }
 
     @RequestMapping(value = "/detail",method = RequestMethod.POST)
-    public ModelMap detail(@RequestParam Long id){
-        return packageService.selectById(id);
+    public ModelMap detail(@RequestBody IdModel model){
+        return packageService.selectById(model.getId());
     }
 }
