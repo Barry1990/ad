@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1849f6ce-3bb7-49a1-9b6d-a54c797b8b02" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/controller/PackageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/controller/PackageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/PackageMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/PackageMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/model/PackageModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/model/PackageModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/service/PackageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/service/PackageService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/PackageMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/PackageMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +16,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ResourceController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ResourceController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="47" selection-end-column="5" />
+            <state relative-caret-position="277">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PackageController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PackageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/PackageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+            <state relative-caret-position="427">
+              <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,7 +162,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/AdApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/ResourceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/PackageMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/PackageMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java" />
@@ -176,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/PackageModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/PackageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/controller/PackageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java" />
       </list>
     </option>
   </component>
@@ -793,15 +787,16 @@
       <updated>1491630598319</updated>
       <workItem from="1491630600886" duration="8104000" />
       <workItem from="1491787755509" duration="20000" />
-      <workItem from="1491787782840" duration="9994000" />
+      <workItem from="1491787782840" duration="10529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18118000" />
+    <option name="totallyTimeSpent" value="18653000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="84" y="23" width="1356" height="961" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1165,14 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="52" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -1198,14 +1185,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="47" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/PackageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -1218,11 +1197,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/PackageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        <state relative-caret-position="427">
+          <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="52" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -43,7 +43,7 @@ public class ResourceController {
     }
 
     @RequestMapping(value = "/detail",method = RequestMethod.POST)
-    public ModelMap detail(@RequestBody Long id){
+    public ModelMap detail(@RequestParam Long id){
         return resourceService.selectById(id);
     }
 

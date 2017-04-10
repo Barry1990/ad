@@ -6,10 +6,7 @@ import com.gxq.service.PackageService;
 import com.gxq.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
@@ -31,7 +28,7 @@ public class PackageController {
     }
 
     @RequestMapping(value = "/detail",method = RequestMethod.POST)
-    public ModelMap detail(@RequestBody Long id){
+    public ModelMap detail(@RequestParam Long id){
         return packageService.selectById(id);
     }
 }
