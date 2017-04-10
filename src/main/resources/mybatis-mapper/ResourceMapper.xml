@@ -7,7 +7,7 @@
 
     <insert id="insert" parameterType="ResourceModel" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO t_resource (name,title,type,address,state,time,note,is_delete,create_one,create_time)
-        VALUES(#{name},#{title},#{type},#{address},'0',#{time},#{note},'0',#{createOne},SYSDATE())
+        VALUES(#{name},#{title},#{type},#{address},0,#{time},#{note},'0',#{createOne},SYSDATE())
     </insert>
 
     <update id="delete" parameterType="java.util.List">

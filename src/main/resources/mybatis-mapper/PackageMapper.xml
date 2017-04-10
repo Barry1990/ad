@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gxq.mapper.PackageMapper">
+
+    <insert id="insertPackage" parameterType="PackageModel" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_package (name,title,state,note,is_delete,create_one,create_time)
+        VALUES(#{name},#{title},0,#{note},'0',#{createOne},SYSDATE())
+    </insert>
+    
+    <insert id="insertPackage_Resource" parameterType="PackageModel">
+        INSERT INTO t_package_resource (p_id,r_id,sorting,create_one,create_time)
+        VALUES
+        <foreach collection="resourceIds" item="item" index="index" separator="," >
+         (#{id},#{item},#{index},#{createOne},SYSDATE())
+        </foreach>
+    </insert>
+
+
+</mapper>
