@@ -65,6 +65,19 @@
         WHERE is_delete = '0' AND id = #{id}
     </select>
 
+    <select id="selectResouceListByPackageId" parameterType="java.lang.Long" resultMap="resourceMap">
+        SELECT ts.id ,ts.name ,ts.title ,ts.note ,ts.create_time ,ts.type ,ts.time ,ts.state
+            FROM
+            t_resource ts ,
+            t_package_resource tpr
+            WHERE
+            tpr.p_id = #{id}
+            AND tpr.r_id = ts.id
+            AND ts.is_delete = '0'
+            AND ts.state = 1
+        ORDER BY tpr.sorting ASC
+    </select>
+
     <resultMap type="com.gxq.model.ResourceModel" id="resourceMap">
         <id property="id" column="id"/>
         <result property="name" column="name"/>

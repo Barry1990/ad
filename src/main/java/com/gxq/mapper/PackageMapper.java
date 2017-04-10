@@ -22,4 +22,12 @@ public interface PackageMapper {
      * @return
      */
     int insertPackage_Resource(PackageModel packageModel);
+
+    /**
+     * 查询资源包信息
+     * @param id
+     * @return
+     */
+    PackageModel selectPackageById(Long id);
+
 }

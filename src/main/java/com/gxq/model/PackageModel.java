@@ -30,6 +30,10 @@ public class PackageModel implements Serializable {
 
     private List resourceIds;
 
+    private List resources;
+
+    public List getResources() { return resources; }
+
     public Integer getId() {
         return id;
     }
@@ -117,4 +121,6 @@ public class PackageModel implements Serializable {
     public void setResourceIds(List resourceIds) {
         this.resourceIds = resourceIds;
     }
+
+    public void setResources(List resources) { this.resources = resources; }
 }

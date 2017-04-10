@@ -18,5 +18,21 @@
         </foreach>
     </insert>
 
+    <select id="selectPackageById" parameterType="java.lang.Long" resultMap="packageMap">
+        SELECT id,name,title,state,note,create_time
+        FROM t_package
+        WHERE is_delete = '0' AND id = #{id}
+    </select>
+
+    <resultMap type="com.gxq.model.PackageModel" id="packageMap">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="title" column="title"/>
+        <result property="note" column="note"/>
+        <result property="state" column="state"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+
 
 </mapper>

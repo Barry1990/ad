@@ -29,4 +29,9 @@ public class PackageController {
 
         return packageService.insert(packageModel);
     }
+
+    @RequestMapping(value = "/detail",method = RequestMethod.POST)
+    public ModelMap detail(@RequestBody Long id){
+        return packageService.selectById(id);
+    }
 }
