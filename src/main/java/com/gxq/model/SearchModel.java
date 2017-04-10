@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by xuenianxiang on 2017/4/7.
  */
-public class ResourceSearchModel implements Serializable {
+public class SearchModel implements Serializable {
 
     private int pageNum;
 

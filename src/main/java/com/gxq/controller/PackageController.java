@@ -20,13 +20,21 @@ public class PackageController {
     @Autowired
     private PackageService packageService;
 
+    @RequestMapping(value = "/selectAll",method = RequestMethod.POST)
+    public PageModel selectAll(@RequestBody SearchModel model){
+        PageModel result = packageService.selectAll(model);
+        result.setResult("1");
+        result.setErrorCode("获取成功");
+        return result;
+    }
+
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ModelMap add(@RequestBody PackageModel packageModel) {
         return packageService.insert(packageModel);
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public ModelMap delete(BatchModel model){
+    public ModelMap delete(@RequestBody BatchModel model){
         return packageService.delete(model.getList());
     }
 

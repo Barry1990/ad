@@ -2,10 +2,9 @@ package com.gxq.mapper;
 
 import com.gxq.model.ChangeStateModel;
 import com.gxq.model.ResourceModel;
-import com.gxq.model.ResourceSearchModel;
+import com.gxq.model.SearchModel;
 import org.apache.ibatis.annotations.Mapper;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -21,9 +20,9 @@ public interface ResourceMapper {
 
     int updateState(ChangeStateModel model);
 
-    List<ResourceModel> selectAll(ResourceSearchModel model);
+    List<ResourceModel> selectAll(SearchModel model);
 
-    List<ResourceModel> selectPublish(ResourceSearchModel model);
+    List<ResourceModel> selectPublish(SearchModel model);
 
     ResourceModel selectById(Long id);
 

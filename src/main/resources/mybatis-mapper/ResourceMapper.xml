@@ -16,6 +16,7 @@
         <foreach separator="," index="index" item="item" collection="list" close=")" open="(">
             #{item}
         </foreach>
+        AND state = 0
     </update>
 
     <update id="update" parameterType="ResourceModel">
@@ -41,7 +42,7 @@
         </foreach>
     </update>
 
-    <select id="selectAll" parameterType="ResourceSearchModel" resultMap="resourceMap">
+    <select id="selectAll" parameterType="SearchModel" resultMap="resourceMap">
         SELECT id,name,title,state,type,address,note,create_time,time
         FROM t_resource
         WHERE is_delete = '0'
@@ -50,7 +51,7 @@
         <if test="endTime!=null"><![CDATA[ AND create_time < #{endTime}]]> </if>
     </select>
 
-    <select id="selectPublish" parameterType="ResourceSearchModel" resultMap="resourceMap">
+    <select id="selectPublish" parameterType="SearchModel" resultMap="resourceMap">
         SELECT id,name,title,state,type,address,note,create_time,time
         FROM t_resource
         WHERE is_delete = '0' and state = 1

@@ -2,6 +2,8 @@ package com.gxq.mapper;
 
 import com.gxq.model.ChangeStateModel;
 import com.gxq.model.PackageModel;
+import com.gxq.model.ResourceModel;
+import com.gxq.model.SearchModel;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -11,6 +13,13 @@ import java.util.List;
  */
 @Mapper
 public interface PackageMapper {
+
+    /**
+     * 查询所有资源包
+     * @param model
+     * @return
+     */
+    List<PackageModel> selectAll(SearchModel model);
 
     /**
      * 插入资源包主表

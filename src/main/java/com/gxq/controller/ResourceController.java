@@ -7,8 +7,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import java.util.List;
-
 /**
  * Created by xuenianxiang on 2017/4/7.
  */
@@ -27,7 +25,7 @@ public class ResourceController {
     }
 
     @RequestMapping(value = "/selectAll",method = RequestMethod.POST)
-    public PageModel selectAll(@RequestBody ResourceSearchModel model){
+    public PageModel selectAll(@RequestBody SearchModel model){
         PageModel result = resourceService.selectAll(model);
         result.setResult("1");
         result.setErrorCode("获取成功");
@@ -35,7 +33,7 @@ public class ResourceController {
     }
 
     @RequestMapping(value = "/selectPublish",method = RequestMethod.POST)
-    public PageModel selectPublish(@RequestBody ResourceSearchModel model){
+    public PageModel selectPublish(@RequestBody SearchModel model){
         PageModel result = resourceService.selectPublish(model);
         result.setResult("1");
         result.setErrorCode("获取成功");

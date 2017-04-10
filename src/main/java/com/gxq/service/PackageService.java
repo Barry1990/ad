@@ -1,10 +1,10 @@
 package com.gxq.service;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.gxq.mapper.PackageMapper;
 import com.gxq.mapper.ResourceMapper;
-import com.gxq.model.ChangeStateModel;
-import com.gxq.model.PackageModel;
-import com.gxq.model.ResourceModel;
+import com.gxq.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,6 +23,45 @@ public class PackageService {
 
     @Autowired
     private ResourceMapper resourceMapper;
+
+    /**
+     * 查询资源包列表
+     * @param model
+     * @return
+     */
+    public PageModel selectAll(SearchModel model) {
+
+        PageModel pageModel = new PageModel();
+
+        Page page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
+
+        String name = model.getName();
+        String startTime = model.getStartTime();
+        String endTime = model.getEndTime();
+
+        //name模糊查询
+        if (name != null && name.length() > 0){
+            model.setName("%" + name + "%");
+        }else {
+            model.setName(null);
+        }
+
+        if (startTime != null && !(startTime.length()>0)){
+            model.setStartTime(null);
+        }
+
+        if (endTime != null && !(endTime.length()>0)){
+            model.setEndTime(null);
+        }
+
+        List list = packageMapper.selectAll(model);
+
+        pageModel.setList(list);
+
+        pageModel.setTotal(page.getTotal());
+
+        return pageModel;
+    }
 
     /**
      * 添加资源包

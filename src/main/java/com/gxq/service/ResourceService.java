@@ -6,7 +6,7 @@ import com.gxq.mapper.ResourceMapper;
 import com.gxq.model.ChangeStateModel;
 import com.gxq.model.PageModel;
 import com.gxq.model.ResourceModel;
-import com.gxq.model.ResourceSearchModel;
+import com.gxq.model.SearchModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -135,7 +135,7 @@ public class ResourceService {
      * @param model
      * @return
      */
-    public PageModel selectAll(ResourceSearchModel model) {
+    public PageModel selectAll(SearchModel model) {
 
         PageModel pageModel = new PageModel();
 
@@ -174,7 +174,7 @@ public class ResourceService {
      * @param model
      * @return
      */
-    public PageModel selectPublish(ResourceSearchModel model) {
+    public PageModel selectPublish(SearchModel model) {
 
         PageModel pageModel = new PageModel();
 
