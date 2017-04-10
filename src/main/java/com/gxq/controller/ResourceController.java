@@ -34,6 +34,14 @@ public class ResourceController {
         return result;
     }
 
+    @RequestMapping(value = "/selectPublish",method = RequestMethod.POST)
+    public PageModel selectPublish(@RequestBody ResourceSearchModel model){
+        PageModel result = resourceService.selectPublish(model);
+        result.setResult("1");
+        result.setErrorCode("获取成功");
+        return result;
+    }
+
     @RequestMapping(value = "/detail",method = RequestMethod.POST)
     public ModelMap detail(@RequestBody Long id){
         return resourceService.selectById(id);

@@ -158,6 +158,45 @@ public class ResourceService {
         return pageModel;
     }
 
+    /**
+     * 查询已发布的广告资源
+     * @param model
+     * @return
+     */
+    public PageModel selectPublish(ResourceSearchModel model) {
+
+        PageModel pageModel = new PageModel();
+
+        Page page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
+
+        String name = model.getName();
+        String startTime = model.getStartTime();
+        String endTime = model.getEndTime();
+
+        //name模糊查询
+        if (name != null && name.length() > 0){
+            model.setName("%" + name + "%");
+        }else {
+            model.setName(null);
+        }
+
+        if (startTime != null && !(startTime.length()>0)){
+            model.setStartTime(null);
+        }
+
+        if (endTime != null && !(endTime.length()>0)){
+            model.setEndTime(null);
+        }
+
+        List list = resourceMapper.selectPublish(model);
+
+        pageModel.setList(list);
+
+        pageModel.setTotal(page.getTotal());
+
+        return pageModel;
+    }
+
 
     public ModelMap selectById(Long id) {
 

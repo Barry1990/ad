@@ -7,7 +7,7 @@
 
     <insert id="insert" parameterType="ResourceModel" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO t_resource (name,title,type,address,state,time,note,is_delete,create_one,create_time)
-        VALUES(#{name},#{title},#{type},#{address},0,#{time},#{note},'0',#{createOne},SYSDATE())
+        VALUES(#{name},#{title},#{type},#{address},#{state},#{time},#{note},'0',#{createOne},SYSDATE())
     </insert>
 
     <update id="delete" parameterType="java.util.List">
@@ -26,6 +26,7 @@
         <if test="address!=null">address = #{address}, </if>
         <if test="time!=null"> time = #{time}, </if>
         <if test="note!=null"> note = #{note}, </if>
+        <if test="type!=null"> type = #{type}, </if>
         <if test="updateOne!=null"> update_one = #{updateOne}, </if>
         update_time = SYSDATE()
         WHERE id = #{id}
@@ -41,7 +42,7 @@
     </update>
 
     <select id="selectAll" parameterType="ResourceSearchModel" resultMap="resourceMap">
-        SELECT id,name,title,state,type,address,note,create_time
+        SELECT id,name,title,state,type,address,note,create_time,time
         FROM t_resource
         WHERE is_delete = '0'
         <if test="name!=null"> AND name LIKE #{name} OR note LIKE #{name} </if>
@@ -49,8 +50,17 @@
         <if test="endTime!=null"><![CDATA[ AND create_time < #{endTime}]]> </if>
     </select>
 
+    <select id="selectPublish" parameterType="ResourceSearchModel" resultMap="resourceMap">
+        SELECT id,name,title,state,type,address,note,create_time,time
+        FROM t_resource
+        WHERE is_delete = '0' and state = 1
+        <if test="name!=null"> AND name LIKE #{name} OR note LIKE #{name} </if>
+        <if test="startTime!=null"><![CDATA[ AND create_time > #{startTime}]]> </if>
+        <if test="endTime!=null"><![CDATA[ AND create_time < #{endTime}]]> </if>
+    </select>
+
     <select id="selectById" parameterType="java.lang.Long" resultMap="resourceMap">
-        SELECT id,name,title,state,type,address,note,create_time
+        SELECT id,name,title,state,type,address,note,create_time,time
         FROM t_resource
         WHERE is_delete = '0' AND id = #{id}
     </select>

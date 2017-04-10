@@ -23,6 +23,8 @@ public interface ResourceMapper {
 
     List<ResourceModel> selectAll(ResourceSearchModel model);
 
+    List<ResourceModel> selectPublish(ResourceSearchModel model);
+
     ResourceModel selectById(Long id);
 
     Long delete(List list);
