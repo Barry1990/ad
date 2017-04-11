@@ -3,10 +3,7 @@ package com.gxq.service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.gxq.mapper.ResourceMapper;
-import com.gxq.model.ChangeStateModel;
-import com.gxq.model.PageModel;
-import com.gxq.model.ResourceModel;
-import com.gxq.model.SearchModel;
+import com.gxq.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -174,7 +171,7 @@ public class ResourceService {
      * @param model
      * @return
      */
-    public PageModel selectPublish(SearchModel model) {
+    public PageModel selectPublish(PublishSearchModel model) {
 
         PageModel pageModel = new PageModel();
 

@@ -51,13 +51,19 @@
         <if test="endTime!=null"><![CDATA[ AND create_time < #{endTime}]]> </if>
     </select>
 
-    <select id="selectPublish" parameterType="SearchModel" resultMap="resourceMap">
+    <select id="selectPublish" parameterType="PublishSearchModel" resultMap="resourceMap">
         SELECT id,name,title,state,type,address,note,create_time,time
         FROM t_resource
-        WHERE is_delete = '0' and state = 1
+        WHERE is_delete = '0' AND state = 1
         <if test="name!=null"> AND name LIKE #{name} OR note LIKE #{name} </if>
         <if test="startTime!=null"><![CDATA[ AND create_time > #{startTime}]]> </if>
         <if test="endTime!=null"><![CDATA[ AND create_time < #{endTime}]]> </if>
+        <if test="passIds!=null and passIds.size()>0">
+          AND id NOT IN
+          <foreach separator=","  item="item" collection="passIds" close=")" open="(">
+            #{item}
+          </foreach>
+        </if>
     </select>
 
     <select id="selectById" parameterType="java.lang.Long" resultMap="resourceMap">

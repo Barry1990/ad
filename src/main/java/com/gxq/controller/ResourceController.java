@@ -33,7 +33,7 @@ public class ResourceController {
     }
 
     @RequestMapping(value = "/selectPublish",method = RequestMethod.POST)
-    public PageModel selectPublish(@RequestBody SearchModel model){
+    public PageModel selectPublish(@RequestBody PublishSearchModel model){
         PageModel result = resourceService.selectPublish(model);
         result.setResult("1");
         result.setErrorCode("获取成功");

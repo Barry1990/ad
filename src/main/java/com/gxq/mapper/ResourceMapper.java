@@ -1,6 +1,7 @@
 package com.gxq.mapper;
 
 import com.gxq.model.ChangeStateModel;
+import com.gxq.model.PublishSearchModel;
 import com.gxq.model.ResourceModel;
 import com.gxq.model.SearchModel;
 import org.apache.ibatis.annotations.Mapper;
@@ -22,7 +23,7 @@ public interface ResourceMapper {
 
     List<ResourceModel> selectAll(SearchModel model);
 
-    List<ResourceModel> selectPublish(SearchModel model);
+    List<ResourceModel> selectPublish(PublishSearchModel model);
 
     ResourceModel selectById(Long id);
 
