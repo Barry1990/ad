@@ -28,7 +28,7 @@ public class ResourceController {
     public PageModel selectAll(@RequestBody SearchModel model){
         PageModel result = resourceService.selectAll(model);
         result.setResult("1");
-        result.setErrorCode("获取成功");
+        result.setErrorMsg("获取成功");
         return result;
     }
 
@@ -36,7 +36,7 @@ public class ResourceController {
     public PageModel selectPublish(@RequestBody PublishSearchModel model){
         PageModel result = resourceService.selectPublish(model);
         result.setResult("1");
-        result.setErrorCode("获取成功");
+        result.setErrorMsg("获取成功");
         return result;
     }
 
