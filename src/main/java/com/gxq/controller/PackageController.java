@@ -23,18 +23,18 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class PackageController {
 
-    private static Logger logger = LogManager.getLogger(PackageController.class);
+//    private static Logger logger = LogManager.getLogger(PackageController.class);
 
     @Autowired
     private PackageService packageService;
 
     @RequestMapping(value = "/selectAll",method = RequestMethod.POST)
     public PageModel selectAll(@RequestBody SearchModel model){
-        logger.info("Request:/api/package/selectAll 参数:" + new Gson().toJson(model));
+//        logger.info("Request:/api/package/selectAll 参数:" + new Gson().toJson(model));
         PageModel result = packageService.selectAll(model);
         result.setResult("1");
         result.setErrorMsg("获取成功");
-        logger.info("Response:/api/package/selectAll 结果:" + new Gson().toJson(result));
+//        logger.info("Response:/api/package/selectAll 结果:" + new Gson().toJson(result));
         return result;
     }
 
