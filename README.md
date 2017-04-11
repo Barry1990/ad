@@ -1,2 +1,1 @@
-# ad
-广告管理
+mvn spring-boot:run
