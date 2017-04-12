@@ -99,6 +99,13 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 
+		<!-- qiniu -->
+		<dependency>
+			<groupId>com.qiniu</groupId>
+			<artifactId>qiniu-java-sdk</artifactId>
+			<version>7.2.6</version>
+		</dependency>
+
 		<!--Test-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
