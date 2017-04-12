@@ -1,18 +1,11 @@
 package com.gxq.controller;
 
-import com.google.gson.Gson;
 import com.gxq.model.*;
 import com.gxq.service.PackageService;
-import com.gxq.service.ResourceService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.message.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.spring.web.json.Json;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
 
 /**
  * Created by xuenianxiang on 2017/4/10.
@@ -22,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @RequestMapping("/api/package")
 @EnableSwagger2
 public class PackageController {
-    
+
     @Autowired
     private PackageService packageService;
 
