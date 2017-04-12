@@ -15,8 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    //全局异常处理
-
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public ModelMap defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
