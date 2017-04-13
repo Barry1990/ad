@@ -9,5 +9,6 @@
     <mappers>
         <mapper resource="mybatis-mapper/ResourceMapper.xml"/>
         <mapper resource="mybatis-mapper/PackageMapper.xml"/>
+        <mapper resource="mybatis-mapper/DistributionMapper.xml"/>
     </mappers>
 </configuration>

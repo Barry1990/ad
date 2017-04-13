@@ -26,9 +26,15 @@ public class QiniuController {
         String upToken = auth.uploadToken(bucket);
 
         ModelMap result = new ModelMap();
-        result.put("result","1");
-        result.put("errorMsg","获取成功");
-        result.put("data",upToken);
+
+        if(upToken != null){
+            result.put("result","1");
+            result.put("errorMsg","获取成功");
+            result.put("data",upToken);
+        }else {
+            result.put("result", "0");
+            result.put("errorMsg", "获取失败");
+        }
 
         return result;
     }

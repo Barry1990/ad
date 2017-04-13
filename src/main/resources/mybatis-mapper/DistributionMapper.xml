@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gxq.mapper.DistributionMapper">
+
+    <update id="updateState" parameterType="java.util.List">
+        UPDATE t_distribution SET state = 0
+        where id in
+        <foreach separator="," index="index" item="item" collection="list" close=")" open="(">
+            #{item}
+        </foreach>
+        AND is_delete = 0
+    </update>
+
+    <insert id="insertDistribution" parameterType="DistributionModel" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_distribution (u_id,state,is_delete,start_time,end_time,create_one,create_time)
+        VALUES(#{uid},1,0,#{startTime},#{endTime},#{createOne},SYSDATE())
+    </insert>
+
+    <insert id="insertDistribution_Records" parameterType="DistributionModel" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_distribution_records(f_id , r_id , p_id , create_one , create_time) SELECT
+            #{id} ,
+            r.id ,
+            #{packageId} ,
+            #{createOne},
+            SYSDATE()
+        FROM
+            t_resource r ,
+            t_package_resource pr
+        WHERE
+            pr.p_id = #{packageId}
+        AND r.id = pr.r_id
+    </insert>
+
+    <!--<select id="selectDistribution_Records">-->
+        <!--SELECT-->
+            <!--tdr.*-->
+        <!--FROM-->
+            <!--(-->
+                <!--SELECT-->
+                    <!--td.id-->
+                <!--FROM-->
+                    <!--t_distribution td-->
+                <!--WHERE-->
+                    <!--td.state = 1-->
+                <!--AND td.is_delete = '0'-->
+            <!--) aa-->
+        <!--LEFT JOIN t_distribution_records tdr ON aa.id = tdr.f_id-->
+    <!--</select>-->
+
+
+
+
+</mapper>

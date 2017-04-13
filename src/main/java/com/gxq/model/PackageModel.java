@@ -6,9 +6,7 @@ import java.util.List;
 /**
  * Created by xuenianxiang on 2017/4/10.
  */
-public class PackageModel implements Serializable {
-
-    private Integer id;
+public class PackageModel extends BaseModel implements Serializable {
 
     private String name;
 
@@ -18,29 +16,9 @@ public class PackageModel implements Serializable {
 
     private String note;
 
-    private String isDelete;
-
-    private String createOne;
-
-    private String createTime;
-
-    private String updateOne;
-
-    private String updateTime;
-
     private List resourceIds;
 
     private List resources;
-
-    public List getResources() { return resources; }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -74,46 +52,6 @@ public class PackageModel implements Serializable {
         this.note = note;
     }
 
-    public String getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(String isDelete) {
-        this.isDelete = isDelete;
-    }
-
-    public String getCreateOne() {
-        return createOne;
-    }
-
-    public void setCreateOne(String createOne) {
-        this.createOne = createOne;
-    }
-
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    public String getUpdateOne() {
-        return updateOne;
-    }
-
-    public void setUpdateOne(String updateOne) {
-        this.updateOne = updateOne;
-    }
-
-    public String getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
-    }
-
     public List getResourceIds() {
         return resourceIds;
     }
@@ -122,5 +60,11 @@ public class PackageModel implements Serializable {
         this.resourceIds = resourceIds;
     }
 
-    public void setResources(List resources) { this.resources = resources; }
+    public List getResources() {
+        return resources;
+    }
+
+    public void setResources(List resources) {
+        this.resources = resources;
+    }
 }

@@ -1,7 +1,6 @@
 package com.gxq.aspect;
 
 import com.google.gson.Gson;
-import com.gxq.controller.PackageController;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
@@ -15,7 +14,6 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Arrays;
 
 /**
  * Created by xuenianxiang on 2017/4/11.

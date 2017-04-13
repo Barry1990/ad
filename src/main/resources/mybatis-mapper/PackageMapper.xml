@@ -7,7 +7,7 @@
 
     <insert id="insertPackage" parameterType="PackageModel" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO t_package (name,title,state,note,is_delete,create_one,create_time)
-        VALUES(#{name},#{title},#{state},#{note},'0',#{createOne},SYSDATE())
+        VALUES(#{name},#{title},#{state},#{note},0,#{createOne},SYSDATE())
     </insert>
     
     <insert id="insertPackage_Resource" parameterType="PackageModel">
@@ -26,11 +26,11 @@
         <if test="state!=null"> state = #{state}, </if>
         <if test="updateOne!=null"> update_one = #{updateOne}, </if>
         update_time = SYSDATE()
-        WHERE id = #{id} and is_delete = '0'
+        WHERE id = #{id} and is_delete = 0
     </update>
 
     <update id="deletePackage" parameterType="java.util.List">
-        UPDATE t_package SET is_delete = '1'
+        UPDATE t_package SET is_delete = 1
         where id in
         <foreach separator="," index="index" item="item" collection="list" close=")" open="(">
             #{item}
@@ -54,13 +54,13 @@
     <select id="selectPackageById" parameterType="java.lang.Long" resultMap="packageMap">
         SELECT id,name,title,state,note,create_time
         FROM t_package
-        WHERE is_delete = '0' AND id = #{id}
+        WHERE is_delete = 0 AND id = #{id}
     </select>
 
     <select id="selectAll" parameterType="SearchModel" resultMap="packageMap">
         SELECT id,name,title,state,note,create_time
         FROM t_package
-        WHERE is_delete = '0'
+        WHERE is_delete = 0
         <if test="name!=null"> AND name LIKE #{name} OR note LIKE #{name} </if>
         <if test="startTime!=null"><![CDATA[ AND create_time > #{startTime}]]> </if>
         <if test="endTime!=null"><![CDATA[ AND create_time < #{endTime}]]> </if>

@@ -2,7 +2,6 @@ package com.gxq.mapper;
 
 import com.gxq.model.ChangeStateModel;
 import com.gxq.model.PackageModel;
-import com.gxq.model.ResourceModel;
 import com.gxq.model.SearchModel;
 import org.apache.ibatis.annotations.Mapper;
 

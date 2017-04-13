@@ -5,9 +5,8 @@ import java.io.Serializable;
 /**
  * Created by xuenianxiang on 2017/4/7.
  */
-public class ResourceModel implements Serializable {
+public class ResourceModel extends BaseModel implements Serializable {
 
-    private Integer id;
 
     private String name;
 
@@ -22,24 +21,6 @@ public class ResourceModel implements Serializable {
     private Integer time;
 
     private String note;
-
-    private String isDelete;
-
-    private String createOne;
-
-    private String createTime;
-
-    private String updateOne;
-
-    private String updateTime;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -95,45 +76,5 @@ public class ResourceModel implements Serializable {
 
     public void setNote(String note) {
         this.note = note;
-    }
-
-    public String getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(String isDelete) {
-        this.isDelete = isDelete;
-    }
-
-    public String getCreateOne() {
-        return createOne;
-    }
-
-    public void setCreateOne(String createOne) {
-        this.createOne = createOne;
-    }
-
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    public String getUpdateOne() {
-        return updateOne;
-    }
-
-    public void setUpdateOne(String updateOne) {
-        this.updateOne = updateOne;
-    }
-
-    public String getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
     }
 }
