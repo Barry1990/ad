@@ -32,6 +32,14 @@ public class PackageController {
         return result;
     }
 
+    @RequestMapping(value = "/selectPublish",method = RequestMethod.POST)
+    public PageModel selectPublish(@RequestBody SearchModel model){
+        PageModel result = packageService.selectPublish(model);
+        result.setResult("1");
+        result.setErrorMsg("获取成功");
+        return result;
+    }
+
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ModelMap add(@RequestBody PackageModel packageModel) {
         return packageService.insert(packageModel);

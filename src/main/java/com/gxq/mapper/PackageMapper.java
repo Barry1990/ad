@@ -21,6 +21,13 @@ public interface PackageMapper {
     List<PackageModel> selectAll(SearchModel model);
 
     /**
+     * 查询已发布资源包
+     * @param model
+     * @return
+     */
+    List<PackageModel> selectPublish(SearchModel model);
+
+    /**
      * 插入资源包主表
      * @param packageModel
      * @return

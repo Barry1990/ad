@@ -66,6 +66,15 @@
         <if test="endTime!=null"><![CDATA[ AND create_time < #{endTime}]]> </if>
     </select>
 
+    <select id="selectPublish" parameterType="SearchModel" resultMap="packageMap">
+        SELECT id,name,title,state,note,create_time
+        FROM t_package
+        WHERE is_delete = 0 AND state = 1
+        <if test="name!=null"> AND name LIKE #{name} OR note LIKE #{name} </if>
+        <if test="startTime!=null"><![CDATA[ AND create_time > #{startTime}]]> </if>
+        <if test="endTime!=null"><![CDATA[ AND create_time < #{endTime}]]> </if>
+    </select>
+
     <resultMap type="com.gxq.model.PackageModel" id="packageMap">
         <id property="id" column="id"/>
         <result property="name" column="name"/>

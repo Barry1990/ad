@@ -66,6 +66,40 @@ public class PackageService {
         return pageModel;
     }
 
+    public PageModel selectPublish(SearchModel model) {
+
+        PageModel pageModel = new PageModel();
+
+        Page page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
+
+        String name = model.getName();
+        String startTime = model.getStartTime();
+        String endTime = model.getEndTime();
+
+        //name模糊查询
+        if (name != null && name.length() > 0){
+            model.setName("%" + name + "%");
+        }else {
+            model.setName(null);
+        }
+
+        if (startTime != null && !(startTime.length()>0)){
+            model.setStartTime(null);
+        }
+
+        if (endTime != null && !(endTime.length()>0)){
+            model.setEndTime(null);
+        }
+
+        List list = packageMapper.selectPublish(model);
+
+        pageModel.setList(list);
+
+        pageModel.setTotal(page.getTotal());
+
+        return pageModel;
+    }
+
     /**
      * 添加资源包
      * @param packageModel

@@ -5,10 +5,10 @@
 
 <mapper namespace="com.gxq.mapper.DistributionMapper">
 
-    <update id="updateState" parameterType="java.util.List">
-        UPDATE t_distribution SET state = 0
-        where id in
-        <foreach separator="," index="index" item="item" collection="list" close=")" open="(">
+    <update id="updateState" parameterType="ChangeStateModel">
+        UPDATE t_distribution SET state = #{state}
+        WHERE id IN
+        <foreach separator="," item="item" collection="list" close=")" open="(">
             #{item}
         </foreach>
         AND is_delete = 0
@@ -20,10 +20,11 @@
     </insert>
 
     <insert id="insertDistribution_Records" parameterType="DistributionModel" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO t_distribution_records(f_id , r_id , p_id , create_one , create_time) SELECT
+        INSERT INTO t_distribution_records(f_id , r_id , p_id , state , create_one , create_time) SELECT
             #{id} ,
             r.id ,
             #{packageId} ,
+            0 ,
             #{createOne},
             SYSDATE()
         FROM
@@ -34,23 +35,52 @@
         AND r.id = pr.r_id
     </insert>
 
-    <!--<select id="selectDistribution_Records">-->
-        <!--SELECT-->
-            <!--tdr.*-->
-        <!--FROM-->
-            <!--(-->
-                <!--SELECT-->
-                    <!--td.id-->
-                <!--FROM-->
-                    <!--t_distribution td-->
-                <!--WHERE-->
-                    <!--td.state = 1-->
-                <!--AND td.is_delete = '0'-->
-            <!--) aa-->
-        <!--LEFT JOIN t_distribution_records tdr ON aa.id = tdr.f_id-->
-    <!--</select>-->
+    <select id="selectDistribution_Records" parameterType="SearchModel" resultMap="distributionRecordMap">
+            SELECT
+                *
+            FROM
+                (
+                    SELECT
+                        tdr.f_id ,
+                        tdr.p_id ,
+                        tdr.r_id ,
+                        tdr.create_time,
+                        aa.u_id AS device_id ,
+                        tp. NAME AS package_name ,
+                        ts. NAME AS resource_name ,
+                        aa.end_time
+                    FROM
+                        (
+                            SELECT
+                                td.id ,
+                                td.u_id ,
+                                td.end_time
+                            FROM
+                                t_distribution td
+                            WHERE
+                                td.state = 1
+                            AND td.is_delete = 0
+                        ) aa
+                    LEFT JOIN t_distribution_records tdr ON aa.id = tdr.f_id
+                    LEFT JOIN t_package tp ON tdr.p_id = tp.id
+                    LEFT JOIN t_resource ts ON tdr.r_id = ts.id
+                ) r
+            WHERE
+                1 = 1
+                <if test="name!=null"> AND r.package_name LIKE #{name} OR r.resource_name LIKE #{name} </if>
+                <if test="startTime!=null"><![CDATA[ AND r.create_time > #{startTime}]]> </if>
+                <if test="endTime!=null"><![CDATA[ AND r.create_time < #{endTime}]]> </if>
+    </select>
 
-
-
+    <resultMap type="com.gxq.model.DistributionRecordModel" id="distributionRecordMap">
+        <result property="fid" column="f_id"/>
+        <result property="pid" column="p_id"/>
+        <result property="rid" column="r_id"/>
+        <result property="deviceId" column="device_id"/>
+        <result property="packageName" column="package_name"/>
+        <result property="resourceName" column="resource_name"/>
+        <result property="endTime" column="end_time"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
 
 </mapper>
