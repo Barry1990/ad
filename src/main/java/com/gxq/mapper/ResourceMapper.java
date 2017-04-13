@@ -1,9 +1,9 @@
 package com.gxq.mapper;
 
-import com.gxq.model.ChangeStateModel;
+import com.gxq.model.common.ChangeStateModel;
 import com.gxq.model.PublishSearchModel;
 import com.gxq.model.ResourceModel;
-import com.gxq.model.SearchModel;
+import com.gxq.model.common.SearchModel;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

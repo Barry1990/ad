@@ -1,6 +1,11 @@
 package com.gxq.controller;
 
 import com.gxq.model.*;
+import com.gxq.model.common.BatchModel;
+import com.gxq.model.common.IdModel;
+import com.gxq.model.common.SearchModel;
+import com.gxq.model.common.ChangeStateModel;
+import com.gxq.model.page.PageModel;
 import com.gxq.service.PackageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;

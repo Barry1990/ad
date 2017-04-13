@@ -1,5 +1,7 @@
 package com.gxq.model;
 
+import com.gxq.model.base.BaseModel;
+
 import java.io.Serializable;
 import java.util.List;
 

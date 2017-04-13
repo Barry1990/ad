@@ -1,4 +1,4 @@
-package com.gxq.model;
+package com.gxq.model.page;
 
 import java.io.Serializable;
 import java.util.List;
