@@ -35,11 +35,25 @@ public class DistributionService {
 
         ModelMap result = new ModelMap();
 
-        //校验
+        //校验设备
         if (distributionInsertModel.getDeviceIds().size() < 1){
             result.put("result", "0");
             result.put("errorMsg", "设备列表不能为空!");
             return result;
+        }
+
+        //检验时间
+        if (distributionInsertModel.getAtonce() == false){
+            if(distributionInsertModel.getStartTime() == null || distributionInsertModel.getStartTime().equals("")){
+                result.put("result", "0");
+                result.put("errorMsg", "开始时间不能为空!");
+                return result;
+            }
+            if(distributionInsertModel.getEndTime() == null || distributionInsertModel.getEndTime().equals("")){
+                result.put("result", "0");
+                result.put("errorMsg", "结束时间不能为空!");
+                return result;
+            }
         }
 
         //先更新已存在的分发(state 设为 0)

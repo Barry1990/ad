@@ -20,6 +20,8 @@ public class DistributionInsertModel implements Serializable {
 
     private String createOne;
 
+    private Boolean atonce;
+
     public Integer getPackageId() {
         return packageId;
     }
@@ -58,5 +60,13 @@ public class DistributionInsertModel implements Serializable {
 
     public void setCreateOne(String createOne) {
         this.createOne = createOne;
+    }
+
+    public Boolean getAtonce() {
+        return atonce;
+    }
+
+    public void setAtonce(Boolean atonce) {
+        this.atonce = atonce;
     }
 }

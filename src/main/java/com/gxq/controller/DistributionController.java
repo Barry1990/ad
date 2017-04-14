@@ -33,7 +33,10 @@ public class DistributionController {
 
     @RequestMapping(value = "/selectRecords", method = RequestMethod.POST)
     public PageModel selectRecords(@RequestBody SearchModel model){
-        return distributionService.selectRecords(model);
+        PageModel result = distributionService.selectRecords(model);
+        result.setResult("1");
+        result.setErrorMsg("获取成功");
+        return result;
     }
 
     @RequestMapping(value = "/updateState",method = RequestMethod.POST)
