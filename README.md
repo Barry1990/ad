@@ -23,7 +23,7 @@
 
 ### 安装maven
 
-    $sudo apt-get install maven
+    $sudo apt-get install maven
 
 ### 执行
 
