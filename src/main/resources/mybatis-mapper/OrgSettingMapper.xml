@@ -9,6 +9,33 @@
         SELECT * FROM t_org_setting WHERE org_id = #{id}
     </select>
 
+    <select id="selectOrgAccountSetting" parameterType="OrgSettingSearchModel">
+        SELECT
+            t.id AS org_id ,
+            t.name ,
+            t.wx_account ,
+            t.ali_account
+        FROM
+            (
+                SELECT
+                    o.id ,
+                    o.type ,
+                    o.name ,
+                    os.wx_account ,
+                    os.ali_account,
+                    CASE WHEN os.wx_account IS NOT NULL AND os.ali_account IS NOT NULL THEN 1 ELSE 0
+                            END AS is_setting
+                FROM
+                    organization o
+                LEFT JOIN t_org_setting os ON o.id = os.org_id
+            ) t
+        WHERE
+            FIND_IN_SET(t.id , getOrgChildren(#{orgId}))
+            AND t.type = 1
+            <if test="isSetting!=null">   AND t.is_setting = #{isSetting} </if>
+
+    </select>
+
     <insert id="insert" parameterType="ShopModel">
         INSERT INTO t_org_setting(
             org_id ,
@@ -77,5 +104,13 @@
         is_history = 1
         WHERE org_id = #{orgId}
     </update>
+
+
+    <resultMap type="com.gxq.model.OrgSettingModel" id="orgSettingMap">
+        <id property="orgId" column="org_id"/>
+        <result property="name" column="name"/>
+        <result property="wxAccount" column="wx_account"/>
+        <result property="aliAccount" column="ali_account"/>
+    </resultMap>
 
 </mapper>
