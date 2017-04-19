@@ -8,15 +8,15 @@ import java.util.List;
  */
 public class ChangeStateModel implements Serializable {
 
-    private List<Integer> list;
+    private List<Long> list;
 
     private int state;
 
-    public List<Integer> getList() {
+    public List<Long> getList() {
         return list;
     }
 
-    public void setList(List<Integer> list) {
+    public void setList(List<Long> list) {
         this.list = list;
     }
 

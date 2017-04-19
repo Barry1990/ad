@@ -10,9 +10,9 @@ import java.util.List;
  */
 public class DistributionInsertModel implements Serializable {
 
-    private Integer packageId;
+    private Long packageId;
 
-    private List<Integer> deviceIds;
+    private List<Long> deviceIds;
 
     private String startTime;
 
@@ -22,19 +22,19 @@ public class DistributionInsertModel implements Serializable {
 
     private Boolean atonce;
 
-    public Integer getPackageId() {
+    public Long getPackageId() {
         return packageId;
     }
 
-    public void setPackageId(Integer packageId) {
+    public void setPackageId(Long packageId) {
         this.packageId = packageId;
     }
 
-    public List<Integer> getDeviceIds() {
+    public List<Long> getDeviceIds() {
         return deviceIds;
     }
 
-    public void setDeviceIds(List<Integer> deviceIds) {
+    public void setDeviceIds(List<Long> deviceIds) {
         this.deviceIds = deviceIds;
     }
 

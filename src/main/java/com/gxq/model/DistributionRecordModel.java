@@ -7,13 +7,13 @@ import java.io.Serializable;
  */
 public class DistributionRecordModel implements Serializable {
 
-    private Integer fid;
+    private Long fid;
 
-    private Integer pid;
+    private Long pid;
 
-    private Integer rid;
+    private Long rid;
 
-    private Integer deviceId;
+    private Long deviceId;
 
     private String packageName;
 
@@ -31,35 +31,35 @@ public class DistributionRecordModel implements Serializable {
 
     private int state;
 
-    public Integer getFid() {
+    public Long getFid() {
         return fid;
     }
 
-    public void setFid(Integer fid) {
+    public void setFid(Long fid) {
         this.fid = fid;
     }
 
-    public Integer getPid() {
+    public Long getPid() {
         return pid;
     }
 
-    public void setPid(Integer pid) {
+    public void setPid(Long pid) {
         this.pid = pid;
     }
 
-    public Integer getRid() {
+    public Long getRid() {
         return rid;
     }
 
-    public void setRid(Integer rid) {
+    public void setRid(Long rid) {
         this.rid = rid;
     }
 
-    public Integer getDeviceId() {
+    public Long getDeviceId() {
         return deviceId;
     }
 
-    public void setDeviceId(Integer deviceId) {
+    public void setDeviceId(Long deviceId) {
         this.deviceId = deviceId;
     }
 

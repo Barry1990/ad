@@ -18,7 +18,7 @@ public class PackageModel extends BaseModel implements Serializable {
 
     private String note;
 
-    private List<Integer> resourceIds;
+    private List<Long> resourceIds;
 
     private List resources;
 
@@ -54,11 +54,11 @@ public class PackageModel extends BaseModel implements Serializable {
         this.note = note;
     }
 
-    public List<Integer> getResourceIds() {
+    public List<Long> getResourceIds() {
         return resourceIds;
     }
 
-    public void setResourceIds(List<Integer> resourceIds) {
+    public void setResourceIds(List<Long> resourceIds) {
         this.resourceIds = resourceIds;
     }
 

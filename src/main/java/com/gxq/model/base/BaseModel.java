@@ -5,7 +5,7 @@ package com.gxq.model.base;
  */
 public class BaseModel {
 
-    private Integer id;
+    private Long id;
 
     private int isDelete;
 
@@ -17,11 +17,11 @@ public class BaseModel {
 
     private String updateTime;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -63,7 +63,7 @@ public class DistributionService {
         distributionMapper.updateState(changeStateModel);
 
         //插入分发表&记录表
-        for (Integer uid :distributionInsertModel.getDeviceIds()){
+        for (Long uid :distributionInsertModel.getDeviceIds()){
             DistributionModel model = new DistributionModel();
             model.setUid(uid);
             model.setPackageId(distributionInsertModel.getPackageId());

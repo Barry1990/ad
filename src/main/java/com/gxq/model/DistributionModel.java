@@ -9,9 +9,9 @@ import java.io.Serializable;
  */
 public class DistributionModel extends BaseModel implements Serializable {
 
-    private Integer uid;
+    private Long uid;
 
-    private Integer packageId;
+    private Long packageId;
 
     private int state;
 
@@ -19,19 +19,19 @@ public class DistributionModel extends BaseModel implements Serializable {
 
     private String endTime;
 
-    public Integer getUid() {
+    public Long getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(Long uid) {
         this.uid = uid;
     }
 
-    public Integer getPackageId() {
+    public Long getPackageId() {
         return packageId;
     }
 
-    public void setPackageId(Integer packageId) {
+    public void setPackageId(Long packageId) {
         this.packageId = packageId;
     }
 

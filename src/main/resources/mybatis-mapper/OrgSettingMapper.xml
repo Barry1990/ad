@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gxq.mapper.OrgSettingMapper">
+
+    <select id="selectById" parameterType="java.lang.Long" >
+        SELECT * FROM t_org_setting WHERE org_id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="ShopModel">
+        INSERT INTO t_org_setting(
+            org_id ,
+            wx_account ,
+            ali_account ,
+            period_type ,
+            period_time ,
+            create_one ,
+            create_time
+        )
+        VALUES (
+		    #{orgId},
+		    #{wxAccount},
+		    #{aliAccount},
+		    #{periodType},
+		    #{periodTime},
+		    #{createOne},
+		    SYSDATE()
+		)
+    </insert>
+
+    <update id="update" parameterType="ShopModel">
+        UPDATE t_org_setting
+        SET
+        <if test="wxAccount!=null">  wx_account = #{wxAccount},   </if>
+        <if test="aliAccount!=null"> ali_account = #{aliAccount}, </if>
+        <if test="periodType!=null"> period_type = #{periodType}, </if>
+        <if test="periodTime!=null"> period_time = #{periodTime}, </if>
+        <if test="updateOne!=null">  update_one = #{updateOne},   </if>
+        update_time = SYSDATE()
+        WHERE org_id = #{orgId}
+    </update>
+
+    <insert id="insertHistory" parameterType="OrgSettingModel">
+        INSERT INTO t_org_setting_his(
+            org_id ,
+            wx_account ,
+            ali_account ,
+            period_type ,
+            period_time ,
+            is_history ,
+            create_one ,
+            create_time
+        )
+        VALUES (
+		    #{orgId},
+		    #{wxAccount},
+		    #{aliAccount},
+		    #{periodType},
+		    #{periodTime},
+		    0,
+		    #{createOne},
+		    SYSDATE()
+		)
+    </insert>
+
+    <update id="updateHistory" parameterType="OrgSettingModel">
+        UPDATE t_org_setting_his
+        SET
+        <if test="wxAccount!=null">  wx_account = #{wxAccount},   </if>
+        <if test="aliAccount!=null"> ali_account = #{aliAccount}, </if>
+        <if test="periodType!=null"> period_type = #{periodType}, </if>
+        <if test="periodTime!=null"> period_time = #{periodTime}, </if>
+        <if test="updateOne!=null">  update_one = #{updateOne},   </if>
+        update_time = SYSDATE(),
+        is_history = 1
+        WHERE org_id = #{orgId}
+    </update>
+
+</mapper>
