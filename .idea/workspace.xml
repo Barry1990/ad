@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1849f6ce-3bb7-49a1-9b6d-a54c797b8b02" name="Default" comment="全局异常处理">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/controller/EfanController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/model/page/OrgSettingPageModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/util/HttpUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/util/StringUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml" />
-    </list>
+    <list default="true" id="1849f6ce-3bb7-49a1-9b6d-a54c797b8b02" name="Default" comment="全局异常处理" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -869,7 +862,7 @@
       <workItem from="1492563437934" duration="6580000" />
       <workItem from="1492651244031" duration="9339000" />
       <workItem from="1492667198914" duration="1770000" />
-      <workItem from="1492669797472" duration="673000" />
+      <workItem from="1492669797472" duration="698000" />
     </task>
     <task id="LOCAL-00001" summary="全局异常处理">
       <created>1491905184344</created>
@@ -882,7 +875,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100636000" />
+    <option name="totallyTimeSpent" value="100661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="106" y="24" width="1711" height="919" extended-state="0" />
