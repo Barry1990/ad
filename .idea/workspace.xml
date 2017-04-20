@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1849f6ce-3bb7-49a1-9b6d-a54c797b8b02" name="Default" comment="全局异常处理">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/controller/OrgSettingController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgSettingBatchModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/service/OrgSettingService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/controller/EfanController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/model/page/OrgSettingPageModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/util/HttpUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/util/StringUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrgSettingMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrgSettingMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgSettingSearchModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgSettingSearchModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/model/common/BatchModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/model/common/BatchModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,131 +23,138 @@
       <file leaf-file-name="OrgSettingMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+            <state relative-caret-position="690">
+              <caret line="46" column="54" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="54" />
               <folding>
-                <marker date="1492659394000" expanded="true" signature="316:367" ph="SELECT * FRO... t_shop_account" />
-                <marker date="1492659394000" expanded="true" signature="497:1208" ph="SELECT t.id id" />
-                <marker date="1492659394000" expanded="true" signature="497:1282" ph="SELECT t.id id" />
-                <marker date="1492659394000" expanded="true" signature="661:1094" ph="SELECT o.id organization" />
-                <marker date="1492659394000" expanded="true" signature="1411:1776" ph="INSERT INTO t_shop_account... " />
-                <marker date="1492659394000" expanded="true" signature="1857:2313" ph="UPDATE t_sho... " />
-                <marker date="1492659394000" expanded="true" signature="2406:2933" ph="INSERT INTO t_org_setting_his... " />
-                <marker date="1492659394000" expanded="true" signature="2922:2930" ph="SELECT t.org... t_org_setting" />
-                <marker date="1492659394000" expanded="true" signature="2922:2933" ph="INSERT INTO t_org_setting_his... " />
-                <marker date="1492659394000" expanded="true" signature="3161:3347" ph="UPDATE t_sho... " />
+                <marker date="1492660852000" expanded="true" signature="316:367" ph="SELECT * FRO... t_shop_account" />
+                <marker date="1492660852000" expanded="true" signature="497:1208" ph="SELECT t.id id" />
+                <marker date="1492660852000" expanded="true" signature="497:1282" ph="SELECT t.id id" />
+                <marker date="1492660852000" expanded="true" signature="661:1094" ph="SELECT o.id organization" />
+                <marker date="1492660852000" expanded="true" signature="1398:1706" ph="SELECT COUNT... id" />
+                <marker date="1492660852000" expanded="true" signature="1420:1612" ph="SELECT o.id organization" />
+                <marker date="1492660852000" expanded="true" signature="1815:2100" ph="SELECT COUNT... id" />
+                <marker date="1492660852000" expanded="true" signature="1837:2029" ph="SELECT o.id organization" />
+                <marker date="1492660852000" expanded="true" signature="2222:2587" ph="INSERT INTO t_shop_account... " />
+                <marker date="1492660852000" expanded="true" signature="2668:3124" ph="UPDATE t_sho... " />
+                <marker date="1492660852000" expanded="true" signature="3217:3744" ph="INSERT INTO t_org_setting_his... " />
+                <marker date="1492660852000" expanded="true" signature="3733:3741" ph="SELECT t.org... t_org_setting" />
+                <marker date="1492660852000" expanded="true" signature="3733:3744" ph="INSERT INTO t_org_setting_his... " />
+                <marker date="1492660852000" expanded="true" signature="3972:4158" ph="UPDATE t_sho... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResourceMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml">
+      <file leaf-file-name="OrgSettingPageModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/page/OrgSettingPageModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="17" selection-end-column="18" />
+            <state relative-caret-position="135">
+              <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
               <folding>
-                <marker date="1492065037000" expanded="true" signature="321:520" ph="INSERT INTO t_resource... " />
-                <marker date="1492065037000" expanded="true" signature="600:811" ph="UPDATE t_res... " />
-                <marker date="1492065037000" expanded="true" signature="890:1417" ph="UPDATE t_res... " />
-                <marker date="1492065037000" expanded="true" signature="1808:2158" ph="SELECT id,na... " />
-                <marker date="1492065037000" expanded="true" signature="2984:3112" ph="SELECT id,na... " />
-                <marker date="1492065037000" expanded="true" signature="3238:3577" ph="SELECT ts.id... t_resource" />
+                <element signature="e#230#231#0" expanded="false" />
+                <element signature="e#265#266#0" expanded="false" />
+                <element signature="e#319#320#0" expanded="false" />
+                <element signature="e#367#368#0" expanded="false" />
+                <element signature="e#404#405#0" expanded="false" />
+                <element signature="e#439#440#0" expanded="false" />
+                <element signature="e#493#494#0" expanded="false" />
+                <element signature="e#541#542#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrgSettingSearchModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/OrgSettingSearchModel.java">
+      <file leaf-file-name="EfanController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/EfanController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="306">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/util/HttpUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/util/StringUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrgSettingMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrgSettingMapper.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="294">
+              <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DistributionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/DistributionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1602#1603#0" expanded="true" />
+                <element signature="e#1663#1664#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrgSettingService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PageModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/page/PageModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#317#318#0" expanded="false" />
+                <element signature="e#346#347#0" expanded="false" />
+                <element signature="e#390#391#0" expanded="false" />
+                <element signature="e#426#427#0" expanded="false" />
+                <element signature="e#461#462#0" expanded="false" />
+                <element signature="e#492#493#0" expanded="false" />
+                <element signature="e#540#541#0" expanded="false" />
+                <element signature="e#580#581#0" expanded="false" />
+                <element signature="e#609#610#0" expanded="false" />
+                <element signature="e#636#637#0" expanded="false" />
+                <element signature="e#674#675#0" expanded="false" />
+                <element signature="e#706#707#0" expanded="false" />
+                <element signature="e#736#737#0" expanded="false" />
+                <element signature="e#764#765#0" expanded="false" />
+                <element signature="e#804#805#0" expanded="false" />
+                <element signature="e#838#839#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrgSettingService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/OrgSettingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DistributionMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/DistributionMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="33" />
-              <folding>
-                <marker date="1492070889000" expanded="true" signature="292:498" ph="UPDATE t_dis... " />
-                <marker date="1492070889000" expanded="true" signature="292:500" ph="UPDATE t_dis... " />
-                <marker date="1492070889000" expanded="true" signature="636:802" ph="INSERT INTO t_distribution... " />
-                <marker date="1492070889000" expanded="true" signature="946:1322" ph="INSERT INTO t_distribution_records... " />
-                <marker date="1492070889000" expanded="true" signature="1036:1322" ph="SELECT ##{id}... t_resource" />
-                <marker date="1492070889000" expanded="true" signature="1457:2591" ph="SELECT * FRO... f_id" />
-                <marker date="1492070889000" expanded="true" signature="1457:2877" ph="SELECT * FRO... f_id" />
-                <marker date="1492070889000" expanded="true" signature="1537:2531" ph="SELECT tdr.f... id" />
-                <marker date="1492070889000" expanded="true" signature="1955:2298" ph="SELECT td.id... t_distribution" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrgSettingBatchModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/OrgSettingBatchModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#514#515#0" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#638#639#0" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#708#709#0" expanded="true" />
-                <element signature="e#760#761#0" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
-                <element signature="e#875#876#0" expanded="true" />
-                <element signature="e#928#929#0" expanded="true" />
-                <element signature="e#972#973#0" expanded="true" />
-                <element signature="e#1010#1011#0" expanded="true" />
-                <element signature="e#1043#1044#0" expanded="true" />
-                <element signature="e#1096#1097#0" expanded="true" />
-                <element signature="e#1140#1141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrgSettingModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/OrgSettingModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="39" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1620">
+              <caret line="108" column="24" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,20 +162,8 @@
       <file leaf-file-name="OrgSettingController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/OrgSettingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
+            <state relative-caret-position="585">
               <caret line="39" column="1" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DistributionService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/DistributionService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="40" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,11 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/PublishSearchModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/ResourceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/ResourceMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/PageModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/controller/ResourceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/WebRequestLogAspect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/ControllerInterceptor.java" />
@@ -232,7 +219,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/controller/QiniuController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/ChangeStateModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/aspect/WebLogAspect.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/BaseModel.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml" />
@@ -268,9 +254,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgSettingBatchModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrgSettingMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/controller/OrgSettingController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgSettingSearchModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/OrgSettingService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/page/OrgSettingPageModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/util/HttpRequestUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/util/HttpUtils.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/util/StringUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/controller/EfanController.java" />
       </list>
     </option>
   </component>
@@ -282,7 +274,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="106" />
-    <option name="y" value="61" />
+    <option name="y" value="24" />
     <option name="width" value="1711" />
     <option name="height" value="919" />
   </component>
@@ -304,6 +296,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -430,135 +423,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gxq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gxq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gxq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gxq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,7 +460,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1003,7 +867,9 @@
       <workItem from="1492138953478" duration="8042000" />
       <workItem from="1492478676381" duration="4935000" />
       <workItem from="1492563437934" duration="6580000" />
-      <workItem from="1492651244031" duration="7387000" />
+      <workItem from="1492651244031" duration="9339000" />
+      <workItem from="1492667198914" duration="1770000" />
+      <workItem from="1492669797472" duration="673000" />
     </task>
     <task id="LOCAL-00001" summary="全局异常处理">
       <created>1491905184344</created>
@@ -1016,10 +882,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96241000" />
+    <option name="totallyTimeSpent" value="100636000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="106" y="61" width="1711" height="919" extended-state="0" />
+    <frame x="106" y="24" width="1711" height="919" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1027,8 +893,8 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3317647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3317647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1037,8 +903,8 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30235294" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30235294" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1076,54 +942,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/ResourceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="110" column="44" lean-forward="false" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding>
-            <marker date="1492065037000" expanded="true" signature="321:520" ph="INSERT INTO t_resource... " />
-            <marker date="1492065037000" expanded="true" signature="600:811" ph="UPDATE t_res... " />
-            <marker date="1492065037000" expanded="true" signature="890:1417" ph="UPDATE t_res... " />
-            <marker date="1492065037000" expanded="true" signature="1808:2158" ph="SELECT id,na... " />
-            <marker date="1492065037000" expanded="true" signature="2984:3112" ph="SELECT id,na... " />
-            <marker date="1492065037000" expanded="true" signature="3238:3577" ph="SELECT ts.id... t_resource" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/CorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/AdApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/WebRequestLogAspect.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9.jar!/org/aspectj/lang/ProceedingJoinPoint.class">
@@ -1153,19 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#857#858#0" expanded="false" />
-            <element signature="e#917#918#0" expanded="false" />
-            <element signature="e#1644#1645#0" expanded="false" />
-            <element signature="e#1708#1709#0" expanded="false" />
-            <element signature="e#1835#1836#0" expanded="false" />
-            <element signature="e#1897#1898#0" expanded="false" />
-            <element signature="e#2035#2036#0" expanded="false" />
-            <element signature="e#2095#2096#0" expanded="false" />
-            <element signature="e#2238#2239#0" expanded="false" />
-            <element signature="e#2295#2296#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1202,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="139" column="2" lean-forward="false" selection-start-line="139" selection-start-column="2" selection-end-line="168" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1230,31 +1034,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/PackageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="38" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1445#1446#0" expanded="false" />
-            <element signature="e#1503#1504#0" expanded="false" />
-            <element signature="e#1631#1632#0" expanded="false" />
-            <element signature="e#1692#1693#0" expanded="false" />
-            <element signature="e#1816#1817#0" expanded="false" />
-            <element signature="e#1879#1880#0" expanded="false" />
-            <element signature="e#2016#2017#0" expanded="false" />
-            <element signature="e#2074#2075#0" expanded="false" />
-            <element signature="e#2217#2218#0" expanded="false" />
-            <element signature="e#2273#2274#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1279,7 +1062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1322,12 +1104,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
           <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-          <folding>
-            <element signature="e#602#603#0" expanded="false" />
-            <element signature="e#634#635#0" expanded="false" />
-            <element signature="e#1232#1233#0" expanded="false" />
-            <element signature="e#1261#1262#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1369,27 +1145,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/DistributionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="39" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/page/PageModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/PackageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2626">
           <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1397,7 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,13 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1434,9 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="39" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1444,9 +1192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="40" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1472,25 +1217,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
-            <element signature="e#1010#1011#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-            <element signature="e#1096#1097#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1498,19 +1224,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/OrgSettingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="39" column="1" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1518,33 +1231,153 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding>
-            <marker date="1492659394000" expanded="true" signature="316:367" ph="SELECT * FRO... t_shop_account" />
-            <marker date="1492659394000" expanded="true" signature="497:1208" ph="SELECT t.id id" />
-            <marker date="1492659394000" expanded="true" signature="497:1282" ph="SELECT t.id id" />
-            <marker date="1492659394000" expanded="true" signature="661:1094" ph="SELECT o.id organization" />
-            <marker date="1492659394000" expanded="true" signature="1411:1776" ph="INSERT INTO t_shop_account... " />
-            <marker date="1492659394000" expanded="true" signature="1857:2313" ph="UPDATE t_sho... " />
-            <marker date="1492659394000" expanded="true" signature="2406:2933" ph="INSERT INTO t_org_setting_his... " />
-            <marker date="1492659394000" expanded="true" signature="2922:2930" ph="SELECT t.org... t_org_setting" />
-            <marker date="1492659394000" expanded="true" signature="2922:2933" ph="INSERT INTO t_org_setting_his... " />
-            <marker date="1492659394000" expanded="true" signature="3161:3347" ph="UPDATE t_sho... " />
+            <element signature="e#247#248#0" expanded="false" />
+            <element signature="e#275#276#0" expanded="false" />
+            <element signature="e#315#316#0" expanded="false" />
+            <element signature="e#349#350#0" expanded="false" />
+            <element signature="e#385#386#0" expanded="false" />
+            <element signature="e#417#418#0" expanded="false" />
+            <element signature="e#467#468#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#540#541#0" expanded="false" />
+            <element signature="e#570#571#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#651#652#0" expanded="false" />
+            <element signature="e#683#684#0" expanded="false" />
+            <element signature="e#714#715#0" expanded="false" />
+            <element signature="e#759#760#0" expanded="false" />
+            <element signature="e#799#800#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/OrgSettingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="1620">
+          <caret line="108" column="24" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/page/PageModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#317#318#0" expanded="false" />
+            <element signature="e#346#347#0" expanded="false" />
+            <element signature="e#390#391#0" expanded="false" />
+            <element signature="e#426#427#0" expanded="false" />
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#492#493#0" expanded="false" />
+            <element signature="e#540#541#0" expanded="false" />
+            <element signature="e#580#581#0" expanded="false" />
+            <element signature="e#609#610#0" expanded="false" />
+            <element signature="e#636#637#0" expanded="false" />
+            <element signature="e#674#675#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#736#737#0" expanded="false" />
+            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#804#805#0" expanded="false" />
+            <element signature="e#838#839#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/page/OrgSettingPageModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="e#230#231#0" expanded="false" />
+            <element signature="e#265#266#0" expanded="false" />
+            <element signature="e#319#320#0" expanded="false" />
+            <element signature="e#367#368#0" expanded="false" />
+            <element signature="e#404#405#0" expanded="false" />
+            <element signature="e#439#440#0" expanded="false" />
+            <element signature="e#493#494#0" expanded="false" />
+            <element signature="e#541#542#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/OrgSettingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="1" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/util/HttpRequestUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="54" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="54" />
+          <folding>
+            <marker date="1492660852000" expanded="true" signature="316:367" ph="SELECT * FRO... t_shop_account" />
+            <marker date="1492660852000" expanded="true" signature="497:1208" ph="SELECT t.id id" />
+            <marker date="1492660852000" expanded="true" signature="497:1282" ph="SELECT t.id id" />
+            <marker date="1492660852000" expanded="true" signature="661:1094" ph="SELECT o.id organization" />
+            <marker date="1492660852000" expanded="true" signature="1398:1706" ph="SELECT COUNT... id" />
+            <marker date="1492660852000" expanded="true" signature="1420:1612" ph="SELECT o.id organization" />
+            <marker date="1492660852000" expanded="true" signature="1815:2100" ph="SELECT COUNT... id" />
+            <marker date="1492660852000" expanded="true" signature="1837:2029" ph="SELECT o.id organization" />
+            <marker date="1492660852000" expanded="true" signature="2222:2587" ph="INSERT INTO t_shop_account... " />
+            <marker date="1492660852000" expanded="true" signature="2668:3124" ph="UPDATE t_sho... " />
+            <marker date="1492660852000" expanded="true" signature="3217:3744" ph="INSERT INTO t_org_setting_his... " />
+            <marker date="1492660852000" expanded="true" signature="3733:3741" ph="SELECT t.org... t_org_setting" />
+            <marker date="1492660852000" expanded="true" signature="3733:3744" ph="INSERT INTO t_org_setting_his... " />
+            <marker date="1492660852000" expanded="true" signature="3972:4158" ph="UPDATE t_sho... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/DistributionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/util/HttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/util/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/EfanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

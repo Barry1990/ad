@@ -36,6 +36,14 @@
 
     </select>
 
+    <select id="selectOrgAccountSettingCount" parameterType="OrgSettingSearchModel">
+        SELECT COUNT(1) FROM( SELECT o.id , o.type , CASE WHEN os.wx_account IS NOT NULL AND os.ali_account IS NOT NULL THEN '1' ELSE '0' END AS is_setting FROM organization o LEFT JOIN t_org_setting os ON o.id = os.org_id) t WHERE FIND_IN_SET( t.id , getOrgChildren( #{orgId})) AND t.type = 1 AND t.is_setting = '1'
+    </select>
+
+    <select id="selectOrgAccountSettingTotal" parameterType="OrgSettingSearchModel">
+        SELECT COUNT(1) FROM( SELECT o.id , o.type , CASE WHEN os.wx_account IS NOT NULL AND os.ali_account IS NOT NULL THEN '1' ELSE '0' END AS is_setting FROM organization o LEFT JOIN t_org_setting os ON o.id = os.org_id) t WHERE FIND_IN_SET( t.id , getOrgChildren( #{orgId})) AND t.type = 1
+    </select>
+
     <insert id="insert" parameterType="OrgSettingModel" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO t_org_setting(
             org_id ,
