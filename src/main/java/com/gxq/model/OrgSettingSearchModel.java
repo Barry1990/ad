@@ -7,7 +7,7 @@ public class OrgSettingSearchModel {
 
     private Long orgId;
 
-    private int isSetting;
+    private String isSetting;
 
     private int pageNum;
 
@@ -21,11 +21,11 @@ public class OrgSettingSearchModel {
         this.orgId = orgId;
     }
 
-    public int getIsSetting() {
+    public String getIsSetting() {
         return isSetting;
     }
 
-    public void setIsSetting(int isSetting) {
+    public void setIsSetting(String isSetting) {
         this.isSetting = isSetting;
     }
 

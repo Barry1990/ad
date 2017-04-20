@@ -8,13 +8,23 @@ import java.util.List;
  */
 public class BatchModel implements Serializable {
 
-    private List<Integer> list;
+    private List<Long> list;
 
-    public List<Integer> getList() {
+    private String createOne;
+
+    public List<Long> getList() {
         return list;
     }
 
-    public void setList(List<Integer> list) {
+    public void setList(List<Long> list) {
         this.list = list;
+    }
+
+    public String getCreateOne() {
+        return createOne;
+    }
+
+    public void setCreateOne(String createOne) {
+        this.createOne = createOne;
     }
 }

@@ -5,14 +5,14 @@
 
 <mapper namespace="com.gxq.mapper.OrgSettingMapper">
 
-    <select id="selectById" parameterType="java.lang.Long" >
-        SELECT * FROM t_org_setting WHERE org_id = #{id}
+    <select id="selectByOrgId" parameterType="java.lang.Long" resultMap="orgSettingMap">
+        SELECT * FROM t_org_setting WHERE org_id = #{orgId}
     </select>
 
-    <select id="selectOrgAccountSetting" parameterType="OrgSettingSearchModel">
+    <select id="selectOrgAccountSetting" parameterType="OrgSettingSearchModel" resultMap="orgSettingMap">
         SELECT
             t.id AS org_id ,
-            t.name ,
+            t.name AS org_name,
             t.wx_account ,
             t.ali_account
         FROM
@@ -23,7 +23,7 @@
                     o.name ,
                     os.wx_account ,
                     os.ali_account,
-                    CASE WHEN os.wx_account IS NOT NULL AND os.ali_account IS NOT NULL THEN 1 ELSE 0
+                    CASE WHEN os.wx_account IS NOT NULL AND os.ali_account IS NOT NULL THEN '1' ELSE '0'
                             END AS is_setting
                 FROM
                     organization o
@@ -36,7 +36,7 @@
 
     </select>
 
-    <insert id="insert" parameterType="ShopModel">
+    <insert id="insert" parameterType="OrgSettingModel" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO t_org_setting(
             org_id ,
             wx_account ,
@@ -57,7 +57,7 @@
 		)
     </insert>
 
-    <update id="update" parameterType="ShopModel">
+    <update id="update" parameterType="OrgSettingModel">
         UPDATE t_org_setting
         SET
         <if test="wxAccount!=null">  wx_account = #{wxAccount},   </if>
@@ -69,7 +69,7 @@
         WHERE org_id = #{orgId}
     </update>
 
-    <insert id="insertHistory" parameterType="OrgSettingModel">
+    <insert id="insertHistory" parameterType="OrgSettingBatchModel">
         INSERT INTO t_org_setting_his(
             org_id ,
             wx_account ,
@@ -79,36 +79,42 @@
             is_history ,
             create_one ,
             create_time
-        )
-        VALUES (
-		    #{orgId},
-		    #{wxAccount},
-		    #{aliAccount},
-		    #{periodType},
-		    #{periodTime},
-		    0,
-		    #{createOne},
-		    SYSDATE()
-		)
+        ) SELECT
+            t.org_id ,
+            t.wx_account ,
+            t.ali_account ,
+            t.period_type ,
+            t.period_time ,
+            0 ,
+            t.create_one ,
+            t.create_time
+        FROM
+            t_org_setting t
+        WHERE
+            t.org_id IN
+        <foreach separator="," index="index" item="item" collection="list" close=")" open="(">
+            #{item}
+        </foreach>
+
     </insert>
 
-    <update id="updateHistory" parameterType="OrgSettingModel">
+    <update id="updateHistory" parameterType="OrgSettingBatchModel">
         UPDATE t_org_setting_his
         SET
-        <if test="wxAccount!=null">  wx_account = #{wxAccount},   </if>
-        <if test="aliAccount!=null"> ali_account = #{aliAccount}, </if>
-        <if test="periodType!=null"> period_type = #{periodType}, </if>
-        <if test="periodTime!=null"> period_time = #{periodTime}, </if>
-        <if test="updateOne!=null">  update_one = #{updateOne},   </if>
+        <if test="createOne!=null">  update_one = #{createOne},   </if>
         update_time = SYSDATE(),
         is_history = 1
-        WHERE org_id = #{orgId}
+        WHERE org_id IN
+        <foreach separator="," index="index" item="item" collection="list" close=")" open="(">
+            #{item}
+        </foreach>
+
     </update>
 
 
     <resultMap type="com.gxq.model.OrgSettingModel" id="orgSettingMap">
         <id property="orgId" column="org_id"/>
-        <result property="name" column="name"/>
+        <result property="orgName" column="org_name"/>
         <result property="wxAccount" column="wx_account"/>
         <result property="aliAccount" column="ali_account"/>
     </resultMap>
