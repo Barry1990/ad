@@ -18,13 +18,56 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class EfanController {
 
+    static String baseUrl = "http://api.efanyun.com/api/";
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@RequestParam String userName,@RequestParam String pw){
 
-        String url="http://api.efanyun.com/api/login?";
+        String url= baseUrl + "login?";
 
         String result = HttpUtils.sendPost(url,"user_name="+ userName+"&pw="+pw);
 
         return StringUtils.decodeUnicode(result);
     }
+
+    @RequestMapping(value = "/getOrgRoot", method = RequestMethod.POST)
+    public String getOrgRoot(){
+
+        String url= baseUrl +"getOrgRoot?";
+
+        String result = HttpUtils.sendPost(url,"");
+
+        return StringUtils.decodeUnicode(result);
+    }
+
+    @RequestMapping(value = "/getOrgOperators", method = RequestMethod.POST)
+    public String getOrgOperators(@RequestParam String orgId){
+
+        String url= baseUrl+"getOrgOperators?";
+
+        String result = HttpUtils.sendPost(url,"org_id="+orgId);
+
+        return StringUtils.decodeUnicode(result);
+    }
+
+    @RequestMapping(value = "/getOrgList", method = RequestMethod.POST)
+    public String getOrgList(@RequestParam String orgId) {
+
+        String url = baseUrl + "getOrgList?";
+
+        String result = HttpUtils.sendPost(url, "org_id=" + orgId);
+
+        return StringUtils.decodeUnicode(result);
+    }
+
+    @RequestMapping(value = "/getOrgChildren", method = RequestMethod.POST)
+    public String getOrgChildren(@RequestParam String orgId) {
+
+        String url = baseUrl + "getOrgChildren?";
+
+        String result = HttpUtils.sendPost(url, "org_id=" + orgId);
+
+        return StringUtils.decodeUnicode(result);
+    }
+
 }
