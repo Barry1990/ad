@@ -34,7 +34,7 @@
         WHERE
             FIND_IN_SET(t.id , getOrgChildren(#{orgId}))
             AND t.type = 1
-            <if test="isSetting!=null">   AND t.is_setting = #{isSetting} </if>
+            <if test="isSetting!=null and isSetting!='' ">   AND t.is_setting = #{isSetting} </if>
 
     </select>
 
@@ -75,7 +75,7 @@
         WHERE
             FIND_IN_SET(t.id , getOrgChildren(#{orgId}))
             AND t.type = 1
-        <if test="isSetting!=null">   AND t.is_setting = #{isSetting} </if>
+        <if test="isSetting!=null and isSetting!='' ">   AND t.is_setting = #{isSetting} </if>
     </select>
 
     <select id="selectOrgPeriodSettingCount" parameterType="OrgSettingSearchModel" resultType="java.lang.Long">
