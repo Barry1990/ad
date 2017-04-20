@@ -32,7 +32,7 @@ public class OrgSettingModel extends BaseModel implements Serializable {
     /**
      * 周期类型(1.月结  2.日结)
      */
-    private String periodType;
+    private Integer periodType;
 
     /**
      * 周期
@@ -71,11 +71,11 @@ public class OrgSettingModel extends BaseModel implements Serializable {
         this.aliAccount = aliAccount;
     }
 
-    public String getPeriodType() {
+    public Integer getPeriodType() {
         return periodType;
     }
 
-    public void setPeriodType(String periodType) {
+    public void setPeriodType(Integer periodType) {
         this.periodType = periodType;
     }
 

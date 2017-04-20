@@ -14,7 +14,20 @@ import java.util.List;
 @Mapper
 public interface OrgSettingMapper {
 
+    /*** Account ***/
     List<OrgSettingModel> selectOrgAccountSetting(OrgSettingSearchModel searchModel);
+
+    Long selectOrgAccountSettingCount(OrgSettingSearchModel searchModel);
+
+    Long selectOrgAccountSettingTotal(OrgSettingSearchModel searchModel);
+
+    /*** Period ***/
+    List<OrgSettingModel> selectOrgPeriodSetting(OrgSettingSearchModel searchModel);
+
+    Long selectOrgPeriodSettingCount(OrgSettingSearchModel searchModel);
+
+    Long selectOrgPeriodSettingTotal(OrgSettingSearchModel searchModel);
+
 
     OrgSettingModel selectByOrgId(Long orgId);
 
