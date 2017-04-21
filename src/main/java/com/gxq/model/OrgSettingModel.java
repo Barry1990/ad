@@ -45,6 +45,7 @@ public class OrgSettingModel extends BaseModel implements Serializable {
 
     public void setOrgId(Long orgId) {
         this.orgId = orgId;
+        this.setId(orgId);
     }
 
     public String getOrgName() {

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gxq.mapper.OrgProductMapper">
+    <select id="selectOrgProcuct">
+        SELECT
+            *
+        FROM
+            (
+                SELECT DISTINCT
+                    t.product_id ,
+                    t.pos_name ,
+                    o.id AS org_id ,
+                    o.name AS org_name ,
+                    aa.mcount ,
+                    bb.bcount
+                FROM
+                    sto_position_vs_obj t
+                LEFT JOIN machine m ON t.machine_code = m.machine_code
+                LEFT JOIN organization o ON m.org_id = o.id
+                AND o.type = 1
+                LEFT JOIN(
+                    SELECT
+                        a.product_id ,
+                        COUNT(1) AS mcount
+                    FROM
+                        sto_position_vs_obj a ,
+                        machine am
+                    WHERE
+                        a.machine_code = am.machine_code
+                    AND FIND_IN_SET(am.org_id , getOrgChildren(2))
+                    GROUP BY
+                        a.product_id
+                ) aa ON t.product_id = aa.product_id
+                LEFT JOIN(
+                    SELECT
+                        b.product_id ,
+                        COUNT(1) AS bcount
+                    FROM
+                        sto_position_vs_obj b ,
+                        machine bm
+                    WHERE
+                        b.machine_code = bm.machine_code
+                    AND FIND_IN_SET(bm.org_id , getOrgChildren(2))
+                    GROUP BY
+                        b.product_id
+                ) bb ON t.product_id = bb.product_id
+            ) tt
+        WHERE
+            FIND_IN_SET(tt.org_id , getOrgChildren(2))
+    </select>
+
+
+
+</mapper>
