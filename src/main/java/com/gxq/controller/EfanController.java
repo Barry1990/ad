@@ -70,4 +70,14 @@ public class EfanController {
         return StringUtils.decodeUnicode(result);
     }
 
+    @RequestMapping(value = "/getWxToken", method = RequestMethod.POST)
+    public String getWxToken(@RequestParam String code){
+
+        String url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxae73861a343f7fd6&secret=8b2fbb7b931ab6830626e65b2586b74a&code="+code+"&grant_type=authorization_code";
+
+        String result = HttpUtils.sendPost(url,"");
+
+        return result;
+    }
+
 }
