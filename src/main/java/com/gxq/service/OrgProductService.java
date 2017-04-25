@@ -37,7 +37,7 @@ public class OrgProductService {
         }
 
         //这个分页查询自己用limit实现
-        model.setPageNum(model.getPageNum()*model.getPageSize());
+        model.setPageNum((model.getPageNum() - 1) * model.getPageSize());
 
         List<OrgProductModel> list = orgProductMapper.selectOrgProcuct(model);
 
