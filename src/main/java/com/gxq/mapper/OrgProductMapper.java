@@ -19,6 +19,8 @@ public interface OrgProductMapper {
 
     Long selectAlreadyCount(OrgProductSearchModel searchModel);
 
+    Long selectTotalCount(OrgProductSearchModel searchModel);
+
     int insert(OrgProductModel model);
 
     int insertHistory(OrgProductModel model);

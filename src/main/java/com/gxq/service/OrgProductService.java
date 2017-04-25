@@ -36,17 +36,20 @@ public class OrgProductService {
             model.setOrgName(null);
         }
 
-        Page page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
+        //这个分页查询自己用limit实现
+        model.setPageNum(model.getPageNum()*model.getPageSize());
 
         List<OrgProductModel> list = orgProductMapper.selectOrgProcuct(model);
 
         pageModel.setList(list);
 
-        pageModel.setTotal(page.getTotal());
+        Long total = orgProductMapper.selectTotalCount(model);
+
+        pageModel.setTotal(total);
 
         pageModel.setAlreadyCount(orgProductMapper.selectAlreadyCount(model));
 
-        pageModel.setSettingTotal(page.getTotal());
+        pageModel.setSettingTotal(total);
 
         return pageModel;
     }
