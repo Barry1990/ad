@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gxq.mapper.OrderMapper">
+
+    <insert id="insertOrderStatus">
+        <![CDATA[
+        SELECT
+            t.order_id ,
+            t.pay_price ,
+            t.org_id ,
+            t.product_id ,
+            t.update_date,
+            s.wx_account ,
+            s.ali_account ,
+            CASE
+        WHEN s.period_type = 1 THEN
+            date_add(
+                t.update_date ,
+                INTERVAL s.period_time DAY
+            )
+
+        WHEN s.period_type = 2 and extract(DAY FROM last_day(date_format(date_add(t.update_date,interval 1 month),'%Y-%m-%d'))) >= s.period_time  THEN
+            date_add(
+                date_add(t.update_date , INTERVAL 1 MONTH) ,
+                INTERVAL (s.period_time - extract(DAY FROM t.update_date)) DAY
+            )
+
+         WHEN s.period_type = 2 and  extract(DAY FROM last_day(date_format(date_add(t.update_date,interval 1 month),'%Y-%m-%d'))) < s.period_time  THEN
+            date_add(
+                date_add(t.update_date , INTERVAL 1 MONTH) ,
+                INTERVAL (extract(DAY FROM last_day(date_format(date_add(t.update_date,interval 1 month),'%Y-%m-%d'))) - extract(DAY FROM t.update_date)) DAY
+            )
+
+        END AS pay_date
+
+        FROM
+            (
+                SELECT
+                    b.order_id ,
+                    b.pay_price ,
+                    m.org_id ,
+                    b.product_id ,
+                    b.update_date
+                FROM
+                    business_order b ,
+                    machine m
+                WHERE
+                    DATE_FORMAT(b.update_date , '%Y-%m-%d') = '2017-04-03'
+                AND b.`status` = 4
+                AND m.machine_code = b.machine_code
+            ) t
+        LEFT JOIN t_org_setting s ON t.org_id = s.org_id
+
+        LEFT JOIN t_product_scale ps on ps.org_id = t.org_id and ps.product_id = t.product_id
+    ]]>
+    </insert>
+
+</mapper>

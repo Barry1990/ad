@@ -28,3 +28,31 @@
         </Root>
     </Loggers>
 </Configuration>
+
+<!--<Configuration>-->
+    <!--<Appenders>-->
+
+        <!--<Console name="STDOUT" target="SYSTEM_OUT">-->
+            <!--&lt;!&ndash; 输出格式 &ndash;&gt;-->
+            <!--<PatternLayout pattern="[%l] [%t] [%-4r] [%d{yyyy-MM-dd HH:mm:ss,SSS}] [%p] \: %m%n"/>-->
+        <!--</Console>-->
+    <!--</Appenders>-->
+
+    <!--<Loggers>-->
+
+        <!--&lt;!&ndash; 配置记录器级别 &ndash;&gt;-->
+        <!--<Root level="debug">-->
+            <!--&lt;!&ndash; 输出设置 &ndash;&gt;-->
+            <!--<AppenderRef ref="STDOUT"/>-->
+        <!--</Root>-->
+
+        <!--&lt;!&ndash; 将调用mybatis的dao的包填入此处即可 &ndash;&gt;-->
+
+        <!--<logger name="com.gxq.mapper">-->
+            <!--<level value="DEBUG" />-->
+            <!--<AppenderRef ref="STDOUT" />-->
+        <!--</logger>-->
+
+    <!--</Loggers>-->
+<!--</Configuration>-->
+

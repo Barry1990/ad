@@ -105,7 +105,7 @@
                 AND o.type = 1
                 AND FIND_IN_SET(o.id , getOrgChildren(#{orgId}))
                 <if test="orgName!=null"> AND o.name LIKE #{orgName} </if>
-                LIMIT #{pageNum},#{pageSize}
+                LIMIT #{pageSize} OFFSET #{pageNum}
             ) tt
          LEFT JOIN t_product_scale ps
             ON tt.product_id = ps.product_id
