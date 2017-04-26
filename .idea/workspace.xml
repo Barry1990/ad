@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1849f6ce-3bb7-49a1-9b6d-a54c797b8b02" name="Default" comment="全局异常处理">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrgerMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrderMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/service/OrgProductService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/service/OrgProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,36 +32,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrgProductMapper.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OrgProductMapper.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="115" column="13" lean-forward="false" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+            <state relative-caret-position="-904">
+              <caret line="105" column="25" lean-forward="false" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
               <folding>
-                <marker date="1493173662000" expanded="true" signature="317:400" ph="SELECT * FRO... t_org_setting" />
-                <marker date="1493173662000" expanded="true" signature="522:918" ph="INSERT INTO t_product_scale... " />
-                <marker date="1493173662000" expanded="true" signature="999:1379" ph="UPDATE t_pro... " />
-                <marker date="1493173662000" expanded="true" signature="1467:1952" ph="INSERT INTO t_org_setting_his... " />
-                <marker date="1493173662000" expanded="true" signature="1467:1994" ph="INSERT INTO t_product_scale_his... " />
-                <marker date="1493173662000" expanded="true" signature="1687:1951" ph="SELECT t.org... t_org_setting" />
-                <marker date="1493173662000" expanded="true" signature="2082:2310" ph="UPDATE t_org... " />
-                <marker date="1493173662000" expanded="true" signature="2433:4222" ph="SELECT ttt.*... *" />
-                <marker date="1493173662000" expanded="true" signature="2565:3620" ph="SELECT DISTI... sto_position_vs_obj" />
-                <marker date="1493173662000" expanded="true" signature="2565:3754" ph="SELECT DISTI... sto_position_vs_obj" />
-                <marker date="1493173662000" expanded="true" signature="2565:3760" ph="SELECT DISTI... sto_position_vs_obj" />
-                <marker date="1493173662000" expanded="true" signature="2565:3812" ph="SELECT DISTI... sto_position_vs_obj" />
-                <marker date="1493173662000" expanded="true" signature="2732:2996" ph="SELECT count... sto_position_vs_obj" />
-                <marker date="1493173662000" expanded="true" signature="3050:3305" ph="SELECT count... sto_position_vs_obj" />
-                <marker date="1493173662000" expanded="true" signature="3927:3953" ph="SELECT tt.*,... product_id" />
-                <marker date="1493173662000" expanded="true" signature="3927:4222" ph="SELECT ttt.*... *" />
-                <marker date="1493173662000" expanded="true" signature="4348:5080" ph="SELECT COUNT... product_id" />
-                <marker date="1493173662000" expanded="true" signature="4378:5075" ph="SELECT tt.pr... product_id" />
-                <marker date="1493173662000" expanded="true" signature="4441:4938" ph="SELECT DISTI... sto_position_vs_obj" />
-                <marker date="1493173662000" expanded="true" signature="5200:6142" ph="SELECT COUNT... product_id" />
-                <marker date="1493173662000" expanded="true" signature="5207:6142" ph="SELECT COUNT... *" />
-                <marker date="1493173662000" expanded="true" signature="5342:5908" ph="SELECT DISTI... sto_position_vs_obj" />
-                <marker date="1493173662000" expanded="true" signature="5914:6051" ph="SELECT tt.*,... product_id" />
-                <marker date="1493173662000" expanded="true" signature="5914:6142" ph="SELECT COUNT... *" />
+                <marker date="1493184346000" expanded="true" signature="317:400" ph="SELECT * FRO... t_org_setting" />
+                <marker date="1493184346000" expanded="true" signature="522:918" ph="INSERT INTO t_product_scale... " />
+                <marker date="1493184346000" expanded="true" signature="999:1379" ph="UPDATE t_pro... " />
+                <marker date="1493184346000" expanded="true" signature="1467:1952" ph="INSERT INTO t_org_setting_his... " />
+                <marker date="1493184346000" expanded="true" signature="1467:1994" ph="INSERT INTO t_product_scale_his... " />
+                <marker date="1493184346000" expanded="true" signature="1687:1951" ph="SELECT t.org... t_org_setting" />
+                <marker date="1493184346000" expanded="true" signature="2082:2310" ph="UPDATE t_org... " />
+                <marker date="1493184346000" expanded="true" signature="2437:4679" ph="SELECT ttt.*... *" />
+                <marker date="1493184346000" expanded="true" signature="2437:4918" ph="SELECT ttt.*... *" />
+                <marker date="1493184346000" expanded="true" signature="2488:2880" ph="SELECT count... sto_position_vs_obj" />
+                <marker date="1493184346000" expanded="true" signature="2956:3339" ph="SELECT count... sto_position_vs_obj" />
+                <marker date="1493184346000" expanded="true" signature="3426:4617" ph="SELECT tt.*,... product_id" />
+                <marker date="1493184346000" expanded="true" signature="3603:4460" ph="SELECT DISTI... sto_position_vs_obj" />
+                <marker date="1493184346000" expanded="true" signature="5049:5781" ph="SELECT COUNT... product_id" />
+                <marker date="1493184346000" expanded="true" signature="5079:5776" ph="SELECT tt.pr... product_id" />
+                <marker date="1493184346000" expanded="true" signature="5142:5639" ph="SELECT DISTI... sto_position_vs_obj" />
+                <marker date="1493184346000" expanded="true" signature="5901:6843" ph="SELECT COUNT... product_id" />
+                <marker date="1493184346000" expanded="true" signature="5908:6843" ph="SELECT COUNT... *" />
+                <marker date="1493184346000" expanded="true" signature="6043:6609" ph="SELECT DISTI... sto_position_vs_obj" />
+                <marker date="1493184346000" expanded="true" signature="6615:6752" ph="SELECT tt.*,... product_id" />
+                <marker date="1493184346000" expanded="true" signature="6615:6843" ph="SELECT COUNT... *" />
               </folding>
             </state>
           </provider>
@@ -121,22 +114,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebLogAspect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/aspect/WebLogAspect.java">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="19" />
+            <state relative-caret-position="345">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="OrderJob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="180">
+              <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#408#409#0" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,8 +153,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -199,7 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/common/IdModel.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/DistributionMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/DistributionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/PackageMapper.xml" />
@@ -247,9 +243,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrderMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/OrgProductService.java" />
         <option value="$PROJECT_DIR$/log/AD.log" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml" />
       </list>
     </option>
   </component>
@@ -440,6 +437,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gxq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="job" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -965,7 +992,7 @@
       <workItem from="1492996841708" duration="21936000" />
       <workItem from="1493082204248" duration="9000" />
       <workItem from="1493082618396" duration="10584000" />
-      <workItem from="1493168718431" duration="5030000" />
+      <workItem from="1493168718431" duration="10365000" />
     </task>
     <task id="LOCAL-00001" summary="全局异常处理">
       <created>1491905184344</created>
@@ -978,7 +1005,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153077000" />
+    <option name="totallyTimeSpent" value="158412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="97" y="31" width="1711" height="919" extended-state="0" />
@@ -989,17 +1016,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23764706" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23764706" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19812974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19812974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22352941" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22352941" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1037,13 +1064,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/PackageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="38" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/DistributionRecordModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -1357,8 +1377,8 @@
         <state relative-caret-position="115">
           <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="23" />
           <folding>
-            <element signature="e#717#718#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="false" />
+            <element signature="e#747#748#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1424,39 +1444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="115" column="13" lean-forward="false" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
-          <folding>
-            <marker date="1493173662000" expanded="true" signature="317:400" ph="SELECT * FRO... t_org_setting" />
-            <marker date="1493173662000" expanded="true" signature="522:918" ph="INSERT INTO t_product_scale... " />
-            <marker date="1493173662000" expanded="true" signature="999:1379" ph="UPDATE t_pro... " />
-            <marker date="1493173662000" expanded="true" signature="1467:1952" ph="INSERT INTO t_org_setting_his... " />
-            <marker date="1493173662000" expanded="true" signature="1467:1994" ph="INSERT INTO t_product_scale_his... " />
-            <marker date="1493173662000" expanded="true" signature="1687:1951" ph="SELECT t.org... t_org_setting" />
-            <marker date="1493173662000" expanded="true" signature="2082:2310" ph="UPDATE t_org... " />
-            <marker date="1493173662000" expanded="true" signature="2433:4222" ph="SELECT ttt.*... *" />
-            <marker date="1493173662000" expanded="true" signature="2565:3620" ph="SELECT DISTI... sto_position_vs_obj" />
-            <marker date="1493173662000" expanded="true" signature="2565:3754" ph="SELECT DISTI... sto_position_vs_obj" />
-            <marker date="1493173662000" expanded="true" signature="2565:3760" ph="SELECT DISTI... sto_position_vs_obj" />
-            <marker date="1493173662000" expanded="true" signature="2565:3812" ph="SELECT DISTI... sto_position_vs_obj" />
-            <marker date="1493173662000" expanded="true" signature="2732:2996" ph="SELECT count... sto_position_vs_obj" />
-            <marker date="1493173662000" expanded="true" signature="3050:3305" ph="SELECT count... sto_position_vs_obj" />
-            <marker date="1493173662000" expanded="true" signature="3927:3953" ph="SELECT tt.*,... product_id" />
-            <marker date="1493173662000" expanded="true" signature="3927:4222" ph="SELECT ttt.*... *" />
-            <marker date="1493173662000" expanded="true" signature="4348:5080" ph="SELECT COUNT... product_id" />
-            <marker date="1493173662000" expanded="true" signature="4378:5075" ph="SELECT tt.pr... product_id" />
-            <marker date="1493173662000" expanded="true" signature="4441:4938" ph="SELECT DISTI... sto_position_vs_obj" />
-            <marker date="1493173662000" expanded="true" signature="5200:6142" ph="SELECT COUNT... product_id" />
-            <marker date="1493173662000" expanded="true" signature="5207:6142" ph="SELECT COUNT... *" />
-            <marker date="1493173662000" expanded="true" signature="5342:5908" ph="SELECT DISTI... sto_position_vs_obj" />
-            <marker date="1493173662000" expanded="true" signature="5914:6051" ph="SELECT tt.*,... product_id" />
-            <marker date="1493173662000" expanded="true" signature="5914:6142" ph="SELECT COUNT... *" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1465,11 +1452,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-904">
+          <caret line="105" column="25" lean-forward="false" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
+          <folding>
+            <marker date="1493184346000" expanded="true" signature="317:400" ph="SELECT * FRO... t_org_setting" />
+            <marker date="1493184346000" expanded="true" signature="522:918" ph="INSERT INTO t_product_scale... " />
+            <marker date="1493184346000" expanded="true" signature="999:1379" ph="UPDATE t_pro... " />
+            <marker date="1493184346000" expanded="true" signature="1467:1952" ph="INSERT INTO t_org_setting_his... " />
+            <marker date="1493184346000" expanded="true" signature="1467:1994" ph="INSERT INTO t_product_scale_his... " />
+            <marker date="1493184346000" expanded="true" signature="1687:1951" ph="SELECT t.org... t_org_setting" />
+            <marker date="1493184346000" expanded="true" signature="2082:2310" ph="UPDATE t_org... " />
+            <marker date="1493184346000" expanded="true" signature="2437:4679" ph="SELECT ttt.*... *" />
+            <marker date="1493184346000" expanded="true" signature="2437:4918" ph="SELECT ttt.*... *" />
+            <marker date="1493184346000" expanded="true" signature="2488:2880" ph="SELECT count... sto_position_vs_obj" />
+            <marker date="1493184346000" expanded="true" signature="2956:3339" ph="SELECT count... sto_position_vs_obj" />
+            <marker date="1493184346000" expanded="true" signature="3426:4617" ph="SELECT tt.*,... product_id" />
+            <marker date="1493184346000" expanded="true" signature="3603:4460" ph="SELECT DISTI... sto_position_vs_obj" />
+            <marker date="1493184346000" expanded="true" signature="5049:5781" ph="SELECT COUNT... product_id" />
+            <marker date="1493184346000" expanded="true" signature="5079:5776" ph="SELECT tt.pr... product_id" />
+            <marker date="1493184346000" expanded="true" signature="5142:5639" ph="SELECT DISTI... sto_position_vs_obj" />
+            <marker date="1493184346000" expanded="true" signature="5901:6843" ph="SELECT COUNT... product_id" />
+            <marker date="1493184346000" expanded="true" signature="5908:6843" ph="SELECT COUNT... *" />
+            <marker date="1493184346000" expanded="true" signature="6043:6609" ph="SELECT DISTI... sto_position_vs_obj" />
+            <marker date="1493184346000" expanded="true" signature="6615:6752" ph="SELECT tt.*,... product_id" />
+            <marker date="1493184346000" expanded="true" signature="6615:6843" ph="SELECT COUNT... *" />
+          </folding>
         </state>
       </provider>
     </entry>
