@@ -7,6 +7,8 @@ public class OrgSettingSearchModel {
 
     private Long orgId;
 
+    private String orgName;
+
     private String isSetting;
 
     private int pageNum;
@@ -19,6 +21,14 @@ public class OrgSettingSearchModel {
 
     public void setOrgId(Long orgId) {
         this.orgId = orgId;
+    }
+
+    public String getOrgName() {
+        return orgName;
+    }
+
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
     }
 
     public String getIsSetting() {

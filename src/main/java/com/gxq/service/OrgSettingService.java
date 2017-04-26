@@ -30,6 +30,14 @@ public class OrgSettingService {
 
         Page page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
 
+        String orgName = model.getOrgName();
+        //name模糊查询
+        if (orgName != null && orgName.length() > 0){
+            model.setOrgName("%" + orgName + "%");
+        }else {
+            model.setOrgName(null);
+        }
+
         List<OrgSettingModel> list = orgSettingMapper.selectOrgAccountSetting(model);
 
         pageModel.setList(list);
@@ -48,6 +56,14 @@ public class OrgSettingService {
         OrgSettingPageModel pageModel = new OrgSettingPageModel();
 
         Page page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
+
+        String orgName = model.getOrgName();
+        //name模糊查询
+        if (orgName != null && orgName.length() > 0){
+            model.setOrgName("%" + orgName + "%");
+        }else {
+            model.setOrgName(null);
+        }
 
         List<OrgSettingModel> list = orgSettingMapper.selectOrgPeriodSetting(model);
 

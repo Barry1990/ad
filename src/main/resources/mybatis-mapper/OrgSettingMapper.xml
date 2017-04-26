@@ -34,23 +34,26 @@
         WHERE
             FIND_IN_SET(t.id , getOrgChildren(#{orgId}))
             AND t.type = 1
-            <if test="isSetting!=null and isSetting!='' ">   AND t.is_setting = #{isSetting} </if>
+        <if test="orgName!=null">AND t.name like #{orgName}</if>
+        <if test="isSetting!=null and isSetting!='' ">   AND t.is_setting = #{isSetting} </if>
 
     </select>
 
     <select id="selectOrgAccountSettingCount" parameterType="OrgSettingSearchModel" resultType="java.lang.Long">
-        SELECT COUNT(1) FROM( SELECT o.id , o.type , CASE WHEN os.wx_account IS NOT NULL AND os.ali_account IS NOT NULL THEN '1' ELSE '0' END AS is_setting FROM organization o LEFT JOIN t_org_setting os ON o.id = os.org_id) t WHERE FIND_IN_SET( t.id , getOrgChildren( #{orgId})) AND t.type = 1 AND t.is_setting = '1'
+        SELECT COUNT(1) FROM( SELECT o.id , o.type ,o.name , CASE WHEN os.wx_account IS NOT NULL AND os.ali_account IS NOT NULL THEN '1' ELSE '0' END AS is_setting FROM organization o LEFT JOIN t_org_setting os ON o.id = os.org_id) t WHERE FIND_IN_SET( t.id , getOrgChildren( #{orgId})) AND t.type = 1 AND t.is_setting = '1'
+        <if test="orgName!=null">AND t.name like #{orgName}</if>
     </select>
 
     <select id="selectOrgAccountSettingTotal" parameterType="OrgSettingSearchModel" resultType="java.lang.Long">
-        SELECT COUNT(1) FROM( SELECT o.id , o.type , CASE WHEN os.wx_account IS NOT NULL AND os.ali_account IS NOT NULL THEN '1' ELSE '0' END AS is_setting FROM organization o LEFT JOIN t_org_setting os ON o.id = os.org_id) t WHERE FIND_IN_SET( t.id , getOrgChildren( #{orgId})) AND t.type = 1
+        SELECT COUNT(1) FROM( SELECT o.id , o.type ,o.name , CASE WHEN os.wx_account IS NOT NULL AND os.ali_account IS NOT NULL THEN '1' ELSE '0' END AS is_setting FROM organization o LEFT JOIN t_org_setting os ON o.id = os.org_id) t WHERE FIND_IN_SET( t.id , getOrgChildren( #{orgId})) AND t.type = 1
+        <if test="orgName!=null">AND t.name like #{orgName}</if>
     </select>
 
     <!-- Period -->
     <select id="selectOrgPeriodSetting" parameterType="OrgSettingSearchModel" resultMap="orgSettingMap">
         SELECT
             t.id AS org_id ,
-            t. NAME AS org_name ,
+            t.name AS org_name ,
             t.wx_account ,
             t.ali_account ,
             t.period_type ,
@@ -75,15 +78,19 @@
         WHERE
             FIND_IN_SET(t.id , getOrgChildren(#{orgId}))
             AND t.type = 1
+        <if test="orgName!=null">AND t.name like #{orgName}</if>
         <if test="isSetting!=null and isSetting!='' ">   AND t.is_setting = #{isSetting} </if>
     </select>
 
     <select id="selectOrgPeriodSettingCount" parameterType="OrgSettingSearchModel" resultType="java.lang.Long">
-        SELECT count(1) FROM( SELECT o.id , o.type , CASE WHEN os.period_type IS NOT NULL AND os.period_time IS NOT NULL THEN '1' ELSE '0' END AS is_setting FROM organization o LEFT JOIN t_org_setting os ON o.id = os.org_id) t WHERE FIND_IN_SET( t.id , getOrgChildren( #{orgId})) AND t.type = 1 AND t.is_setting = '1'
+        SELECT count(1) FROM( SELECT o.id , o.type ,o.name , CASE WHEN os.period_type IS NOT NULL AND os.period_time IS NOT NULL THEN '1' ELSE '0' END AS is_setting FROM organization o LEFT JOIN t_org_setting os ON o.id = os.org_id) t WHERE FIND_IN_SET( t.id , getOrgChildren( #{orgId})) AND t.type = 1 AND t.is_setting = '1'
+        <if test="orgName!=null">AND t.name like #{orgName}</if>
+
     </select>
 
     <select id="selectOrgPeriodSettingTotal" parameterType="OrgSettingSearchModel" resultType="java.lang.Long">
-        SELECT count(1) FROM( SELECT o.id , o.type , CASE WHEN os.period_type IS NOT NULL AND os.period_time IS NOT NULL THEN '1' ELSE '0' END AS is_setting FROM organization o LEFT JOIN t_org_setting os ON o.id = os.org_id) t WHERE FIND_IN_SET( t.id , getOrgChildren( #{orgId})) AND t.type = 1
+        SELECT count(1) FROM( SELECT o.id , o.type ,o.name , CASE WHEN os.period_type IS NOT NULL AND os.period_time IS NOT NULL THEN '1' ELSE '0' END AS is_setting FROM organization o LEFT JOIN t_org_setting os ON o.id = os.org_id) t WHERE FIND_IN_SET( t.id , getOrgChildren( #{orgId})) AND t.type = 1
+        <if test="orgName!=null">AND t.name like #{orgName}</if>
     </select>
 
     <insert id="insert" parameterType="OrgSettingModel" useGeneratedKeys="true" keyProperty="id">
