@@ -5,6 +5,12 @@
 
 <mapper namespace="com.gxq.mapper.DistributionMapper">
 
+    <select id="selectOrgMachine" parameterType="MachineSearchModel" resultType="MachineModel">
+        SELECT m.id,m.machine_name as name from machine m
+        WHERE  FIND_IN_SET(m.org_id,getOrgChildren(#{orgId}))
+        <if test="name!=null"> AND m.machine_name like #{name} </if>
+    </select>
+
     <update id="updateState" parameterType="ChangeStateModel">
         UPDATE t_distribution SET state = #{state}
         WHERE id IN

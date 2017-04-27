@@ -5,6 +5,7 @@ import com.github.pagehelper.PageHelper;
 import com.gxq.mapper.DistributionMapper;
 import com.gxq.model.DistributionInsertModel;
 import com.gxq.model.DistributionModel;
+import com.gxq.model.MachineSearchModel;
 import com.gxq.model.common.ChangeStateModel;
 import com.gxq.model.common.SearchModel;
 import com.gxq.model.page.PageModel;
@@ -82,6 +83,31 @@ public class DistributionService {
 
         return result;
     }
+
+    public PageModel selectOrgMachine(MachineSearchModel model){
+
+        PageModel pageModel = new PageModel();
+
+        Page page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
+
+        String name = model.getName();
+
+        //name模糊查询
+        if (name != null && name.length() > 0){
+            model.setName("%" + name + "%");
+        }else {
+            model.setName(null);
+        }
+
+        List list = distributionMapper.selectOrgMachine(model);
+
+        pageModel.setList(list);
+
+        pageModel.setTotal(page.getTotal());
+
+        return pageModel;
+    }
+
 
     public PageModel selectRecords(SearchModel model){
         PageModel pageModel = new PageModel();

@@ -1,7 +1,7 @@
 package com.gxq.controller;
 
 import com.gxq.model.DistributionInsertModel;
-import com.gxq.model.PackageModel;
+import com.gxq.model.MachineSearchModel;
 import com.gxq.model.common.ChangeStateModel;
 import com.gxq.model.common.SearchModel;
 import com.gxq.model.page.PageModel;
@@ -25,6 +25,14 @@ public class DistributionController {
 
     @Autowired
     private DistributionService distributionService;
+
+    @RequestMapping(value = "/getMachineList", method = RequestMethod.POST)
+    public PageModel getMachineList(@RequestBody MachineSearchModel model){
+        PageModel result = distributionService.selectOrgMachine(model);
+        result.setResult("1");
+        result.setErrorMsg("获取成功");
+        return result;
+    }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ModelMap add(@RequestBody DistributionInsertModel distributionInsertModel) {
