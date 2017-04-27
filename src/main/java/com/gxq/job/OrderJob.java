@@ -1,5 +1,9 @@
 package com.gxq.job;
 
+import com.gxq.service.OrderService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -12,9 +16,17 @@ import org.springframework.scheduling.annotation.Scheduled;
 @EnableScheduling // 启用定时任务
 public class OrderJob {
 
+    private Logger logger = LogManager.getLogger(getClass());
 
-    @Scheduled(cron = "0 8 11 * * ?") // 每20秒执行一次
+    @Autowired
+    private OrderService orderService;
+
+    @Scheduled(cron = "0 0 1 * * ?") //每天凌晨1点结算
     public void scheduler() {
-        System.out.println("每日定时执行任务");
+
+        int result = orderService.insertOrderStatus();
+
+        logger.info("后台作业------插入"+result+"条交易记录");
+
     }
 }

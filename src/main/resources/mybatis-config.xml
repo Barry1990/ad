@@ -12,5 +12,6 @@
         <mapper resource="mybatis-mapper/DistributionMapper.xml"/>
         <mapper resource="mybatis-mapper/OrgSettingMapper.xml"/>
         <mapper resource="mybatis-mapper/OrgProductMapper.xml"/>
+        <mapper resource="mybatis-mapper/OrderMapper.xml"/>
     </mappers>
 </configuration>

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1849f6ce-3bb7-49a1-9b6d-a54c797b8b02" name="Default" comment="全局异常处理">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/service/OrderService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrgerMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrderMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/service/OrgProductService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/service/OrgProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java" afterPath="$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrderMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrderMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,165 +20,83 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OrgSettingMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml">
+      <file leaf-file-name="OrderMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrderMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="90" column="75" lean-forward="false" selection-start-line="90" selection-start-column="75" selection-end-line="90" selection-end-column="75" />
+            <state relative-caret-position="359">
+              <caret line="25" column="93" lean-forward="false" selection-start-line="25" selection-start-column="93" selection-end-line="25" selection-end-column="93" />
               <folding>
-                <marker date="1493194821000" expanded="true" signature="316:367" ph="SELECT * FRO... t_shop_account" />
-                <marker date="1493194821000" expanded="true" signature="519:1230" ph="SELECT t.id id" />
-                <marker date="1493194821000" expanded="true" signature="519:1384" ph="SELECT t.id id" />
-                <marker date="1493194821000" expanded="true" signature="683:1116" ph="SELECT o.id organization" />
-                <marker date="1493194821000" expanded="true" signature="1528:1844" ph="SELECT COUNT... id" />
-                <marker date="1493194821000" expanded="true" signature="1528:1904" ph="SELECT COUNT... id" />
-                <marker date="1493194821000" expanded="true" signature="1550:1750" ph="SELECT o.id organization" />
-                <marker date="1493194821000" expanded="true" signature="2046:2339" ph="SELECT COUNT... id" />
-                <marker date="1493194821000" expanded="true" signature="2046:2399" ph="SELECT COUNT... id" />
-                <marker date="1493194821000" expanded="true" signature="2068:2268" ph="SELECT o.id organization" />
-                <marker date="1493194821000" expanded="true" signature="2553:3409" ph="SELECT t.id id" />
-                <marker date="1493194821000" expanded="true" signature="2553:3563" ph="SELECT t.id id" />
-                <marker date="1493194821000" expanded="true" signature="2774:3295" ph="SELECT o.id organization" />
-                <marker date="1493194821000" expanded="true" signature="3705:4022" ph="SELECT count... id" />
-                <marker date="1493194821000" expanded="true" signature="3705:4082" ph="SELECT count... id" />
-                <marker date="1493194821000" expanded="true" signature="3727:3928" ph="SELECT o.id organization" />
-                <marker date="1493194821000" expanded="true" signature="4224:4518" ph="SELECT count... id" />
-                <marker date="1493194821000" expanded="true" signature="4224:4578" ph="SELECT count... id" />
-                <marker date="1493194821000" expanded="true" signature="4246:4447" ph="SELECT o.id organization" />
-                <marker date="1493194821000" expanded="true" signature="4705:5070" ph="INSERT INTO t_shop_account... " />
-                <marker date="1493194821000" expanded="true" signature="5151:5607" ph="UPDATE t_sho... " />
-                <marker date="1493194821000" expanded="true" signature="5700:6227" ph="INSERT INTO t_org_setting_his... " />
-                <marker date="1493194821000" expanded="true" signature="6216:6224" ph="SELECT t.org... t_org_setting" />
-                <marker date="1493194821000" expanded="true" signature="6216:6227" ph="INSERT INTO t_org_setting_his... " />
-                <marker date="1493194821000" expanded="true" signature="6455:6641" ph="UPDATE t_sho... " />
+                <marker date="1493274449000" expanded="true" signature="283:3641" ph="SELECT t.ord... order_id" />
+                <marker date="1493274449000" expanded="true" signature="310:3352" ph="INSERT INTO t_order_status... " />
+                <marker date="1493274449000" expanded="true" signature="310:3632" ph="INSERT INTO t_order_status... " />
+                <marker date="1493274449000" expanded="true" signature="539:3352" ph="SELECT t.ord... order_id" />
+                <marker date="1493274449000" expanded="true" signature="1991:3335" ph="SELECT t.ord... order_id" />
+                <marker date="1493274449000" expanded="true" signature="2488:3128" ph="SELECT b.ord... business_order" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrgProductMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml">
+      <file leaf-file-name="OrderService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/OrderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="89" column="12" lean-forward="false" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
+            <state relative-caret-position="405">
+              <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
               <folding>
-                <marker date="1493265667000" expanded="true" signature="317:400" ph="SELECT * FRO... t_org_setting" />
-                <marker date="1493265667000" expanded="true" signature="522:918" ph="INSERT INTO t_product_scale... " />
-                <marker date="1493265667000" expanded="true" signature="999:1379" ph="UPDATE t_pro... " />
-                <marker date="1493265667000" expanded="true" signature="1467:1952" ph="INSERT INTO t_org_setting_his... " />
-                <marker date="1493265667000" expanded="true" signature="1467:1994" ph="INSERT INTO t_product_scale_his... " />
-                <marker date="1493265667000" expanded="true" signature="1687:1951" ph="SELECT t.org... t_org_setting" />
-                <marker date="1493265667000" expanded="true" signature="2082:2310" ph="UPDATE t_org... " />
-                <marker date="1493265667000" expanded="true" signature="2437:4679" ph="SELECT ttt.*... *" />
-                <marker date="1493265667000" expanded="true" signature="2437:4918" ph="SELECT @num:... " />
-                <marker date="1493265667000" expanded="true" signature="2437:4923" ph="SELECT @num:... " />
-                <marker date="1493265667000" expanded="true" signature="2437:4930" ph="SELECT &lt;![CD... " />
-                <marker date="1493265667000" expanded="true" signature="2488:2880" ph="SELECT count... sto_position_vs_obj" />
-                <marker date="1493265667000" expanded="true" signature="2956:3339" ph="SELECT count... sto_position_vs_obj" />
-                <marker date="1493265667000" expanded="true" signature="3426:4617" ph="SELECT tt.*,... product_id" />
-                <marker date="1493265667000" expanded="true" signature="3603:4460" ph="SELECT DISTI... sto_position_vs_obj" />
-                <marker date="1493265667000" expanded="true" signature="4930:4944" ph="select&gt; &lt;... " />
-                <marker date="1493265667000" expanded="true" signature="4944:5039" ph="select id=&quot;s... " />
-                <marker date="1493265667000" expanded="true" signature="5049:5781" ph="SELECT COUNT... product_id" />
-                <marker date="1493265667000" expanded="true" signature="5049:5788" ph="SELECT COUNT... product_id" />
-                <marker date="1493265667000" expanded="true" signature="5079:5776" ph="SELECT tt.pr... product_id" />
-                <marker date="1493265667000" expanded="true" signature="5142:5639" ph="SELECT DISTI... sto_position_vs_obj" />
-                <marker date="1493265667000" expanded="true" signature="5788:5802" ph="select&gt; &lt;... " />
-                <marker date="1493265667000" expanded="true" signature="5802:5899" ph="select id=&quot;s... " />
-                <marker date="1493265667000" expanded="true" signature="5901:6843" ph="SELECT COUNT... product_id" />
-                <marker date="1493265667000" expanded="true" signature="5908:6843" ph="SELECT COUNT... *" />
-                <marker date="1493265667000" expanded="true" signature="6043:6609" ph="SELECT DISTI... sto_position_vs_obj" />
-                <marker date="1493265667000" expanded="true" signature="6043:6615" ph="SELECT DISTI... sto_position_vs_obj" />
-                <marker date="1493265667000" expanded="true" signature="6615:6752" ph="SELECT tt.*,... product_id" />
-                <marker date="1493265667000" expanded="true" signature="6615:6843" ph="SELECT COUNT... *" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrgProductService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderMapper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrderMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebLogAspect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/aspect/WebLogAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrgProductService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/OrgProductService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+            <state relative-caret-position="293">
+              <caret line="65" column="4" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistributionMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/DistributionMapper.xml">
+      <file leaf-file-name="DistributionService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/DistributionService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="71" column="84" lean-forward="false" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="84" />
+            <state relative-caret-position="178">
+              <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="40" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrgProductController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/OrgProductController.java">
+      <file leaf-file-name="OrderJob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrgSettingService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/OrgSettingService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="65" column="9" lean-forward="false" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PackageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/PackageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="88" column="18" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
-                <marker date="1492065037000" expanded="true" signature="321:520" ph="INSERT INTO t_resource... " />
-                <marker date="1492065037000" expanded="true" signature="600:811" ph="UPDATE t_res... " />
-                <marker date="1492065037000" expanded="true" signature="890:1417" ph="UPDATE t_res... " />
-                <marker date="1492065037000" expanded="true" signature="1808:2158" ph="SELECT id,na... " />
-                <marker date="1492065037000" expanded="true" signature="2984:3112" ph="SELECT id,na... " />
-                <marker date="1492065037000" expanded="true" signature="3238:3577" ph="SELECT ts.id... t_resource" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PackageService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/PackageService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="83" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrgSettingController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/controller/OrgSettingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -208,6 +129,7 @@
       <find>pageNum</find>
       <find>OFFSET</find>
       <find>@num=0</find>
+      <find>INSERT INTO</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -229,8 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/DistributionMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/DistributionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/PackageMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/PackageMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/PackageService.java" />
@@ -260,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgSettingModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/page/OrgProcuctModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgProcuctModel.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgProductIdModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgProductBatchModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgProductModel.java" />
@@ -270,16 +189,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrgProductMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/controller/EfanController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrgerMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrderMapper.xml" />
         <option value="$PROJECT_DIR$/log/AD.log" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/model/OrgSettingSearchModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/OrgSettingService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/OrgProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java" />
       </list>
     </option>
   </component>
@@ -290,8 +212,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="97" />
-    <option name="y" value="31" />
+    <option name="x" value="624" />
+    <option name="y" value="60" />
     <option name="width" value="1711" />
     <option name="height" value="919" />
   </component>
@@ -1123,7 +1045,7 @@
       <workItem from="1492996841708" duration="21936000" />
       <workItem from="1493082204248" duration="9000" />
       <workItem from="1493082618396" duration="10584000" />
-      <workItem from="1493168718431" duration="15588000" />
+      <workItem from="1493168718431" duration="21425000" />
     </task>
     <task id="LOCAL-00001" summary="全局异常处理">
       <created>1491905184344</created>
@@ -1136,10 +1058,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163635000" />
+    <option name="totallyTimeSpent" value="169472000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="97" y="31" width="1711" height="919" extended-state="0" />
+    <frame x="624" y="60" width="1711" height="919" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1147,11 +1069,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23764706" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23764706" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19812974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19812974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1195,13 +1117,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/PackageModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="60" column="40" lean-forward="false" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/PublishSearchModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1251,13 +1166,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/DistributionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="40" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/model/page/PageModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1291,13 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/PackageMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="27" lean-forward="false" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1409,22 +1310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/aspect/WebLogAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/exception/GlobalExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1441,44 +1326,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrgerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-          <folding>
-            <marker date="1493117892000" expanded="true" signature="250:2058" ph="SELECT t.ord... order_id" />
-            <marker date="1493117892000" expanded="true" signature="276:2050" ph="SELECT t.ord... order_id" />
-            <marker date="1493117892000" expanded="true" signature="1435:1882" ph="SELECT b.ord... business_order" />
-            <marker date="1493117892000" expanded="true" signature="1965:2050" ph="SELECT t.ord... order_id" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1551,66 +1403,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="90" column="75" lean-forward="false" selection-start-line="90" selection-start-column="75" selection-end-line="90" selection-end-column="75" />
-          <folding>
-            <marker date="1493194821000" expanded="true" signature="316:367" ph="SELECT * FRO... t_shop_account" />
-            <marker date="1493194821000" expanded="true" signature="519:1230" ph="SELECT t.id id" />
-            <marker date="1493194821000" expanded="true" signature="519:1384" ph="SELECT t.id id" />
-            <marker date="1493194821000" expanded="true" signature="683:1116" ph="SELECT o.id organization" />
-            <marker date="1493194821000" expanded="true" signature="1528:1844" ph="SELECT COUNT... id" />
-            <marker date="1493194821000" expanded="true" signature="1528:1904" ph="SELECT COUNT... id" />
-            <marker date="1493194821000" expanded="true" signature="1550:1750" ph="SELECT o.id organization" />
-            <marker date="1493194821000" expanded="true" signature="2046:2339" ph="SELECT COUNT... id" />
-            <marker date="1493194821000" expanded="true" signature="2046:2399" ph="SELECT COUNT... id" />
-            <marker date="1493194821000" expanded="true" signature="2068:2268" ph="SELECT o.id organization" />
-            <marker date="1493194821000" expanded="true" signature="2553:3409" ph="SELECT t.id id" />
-            <marker date="1493194821000" expanded="true" signature="2553:3563" ph="SELECT t.id id" />
-            <marker date="1493194821000" expanded="true" signature="2774:3295" ph="SELECT o.id organization" />
-            <marker date="1493194821000" expanded="true" signature="3705:4022" ph="SELECT count... id" />
-            <marker date="1493194821000" expanded="true" signature="3705:4082" ph="SELECT count... id" />
-            <marker date="1493194821000" expanded="true" signature="3727:3928" ph="SELECT o.id organization" />
-            <marker date="1493194821000" expanded="true" signature="4224:4518" ph="SELECT count... id" />
-            <marker date="1493194821000" expanded="true" signature="4224:4578" ph="SELECT count... id" />
-            <marker date="1493194821000" expanded="true" signature="4246:4447" ph="SELECT o.id organization" />
-            <marker date="1493194821000" expanded="true" signature="4705:5070" ph="INSERT INTO t_shop_account... " />
-            <marker date="1493194821000" expanded="true" signature="5151:5607" ph="UPDATE t_sho... " />
-            <marker date="1493194821000" expanded="true" signature="5700:6227" ph="INSERT INTO t_org_setting_his... " />
-            <marker date="1493194821000" expanded="true" signature="6216:6224" ph="SELECT t.org... t_org_setting" />
-            <marker date="1493194821000" expanded="true" signature="6216:6227" ph="INSERT INTO t_org_setting_his... " />
-            <marker date="1493194821000" expanded="true" signature="6455:6641" ph="UPDATE t_sho... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="88" column="18" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <marker date="1492065037000" expanded="true" signature="321:520" ph="INSERT INTO t_resource... " />
-            <marker date="1492065037000" expanded="true" signature="600:811" ph="UPDATE t_res... " />
-            <marker date="1492065037000" expanded="true" signature="890:1417" ph="UPDATE t_res... " />
-            <marker date="1492065037000" expanded="true" signature="1808:2158" ph="SELECT id,na... " />
-            <marker date="1492065037000" expanded="true" signature="2984:3112" ph="SELECT id,na... " />
-            <marker date="1492065037000" expanded="true" signature="3238:3577" ph="SELECT ts.id... t_resource" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/DistributionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="71" column="84" lean-forward="false" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="84" />
+        <state relative-caret-position="210">
+          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgProductMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
+        <state relative-caret-position="-698">
           <caret line="89" column="12" lean-forward="false" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
           <folding>
             <marker date="1493265667000" expanded="true" signature="317:400" ph="SELECT * FRO... t_org_setting" />
@@ -1646,10 +1449,142 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrgSettingMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="129" column="19" lean-forward="false" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="19" />
+          <folding>
+            <marker date="1493194821000" expanded="true" signature="316:367" ph="SELECT * FRO... t_shop_account" />
+            <marker date="1493194821000" expanded="true" signature="519:1230" ph="SELECT t.id id" />
+            <marker date="1493194821000" expanded="true" signature="519:1384" ph="SELECT t.id id" />
+            <marker date="1493194821000" expanded="true" signature="683:1116" ph="SELECT o.id organization" />
+            <marker date="1493194821000" expanded="true" signature="1528:1844" ph="SELECT COUNT... id" />
+            <marker date="1493194821000" expanded="true" signature="1528:1904" ph="SELECT COUNT... id" />
+            <marker date="1493194821000" expanded="true" signature="1550:1750" ph="SELECT o.id organization" />
+            <marker date="1493194821000" expanded="true" signature="2046:2339" ph="SELECT COUNT... id" />
+            <marker date="1493194821000" expanded="true" signature="2046:2399" ph="SELECT COUNT... id" />
+            <marker date="1493194821000" expanded="true" signature="2068:2268" ph="SELECT o.id organization" />
+            <marker date="1493194821000" expanded="true" signature="2553:3409" ph="SELECT t.id id" />
+            <marker date="1493194821000" expanded="true" signature="2553:3563" ph="SELECT t.id id" />
+            <marker date="1493194821000" expanded="true" signature="2774:3295" ph="SELECT o.id organization" />
+            <marker date="1493194821000" expanded="true" signature="3705:4022" ph="SELECT count... id" />
+            <marker date="1493194821000" expanded="true" signature="3705:4082" ph="SELECT count... id" />
+            <marker date="1493194821000" expanded="true" signature="3727:3928" ph="SELECT o.id organization" />
+            <marker date="1493194821000" expanded="true" signature="4224:4518" ph="SELECT count... id" />
+            <marker date="1493194821000" expanded="true" signature="4224:4578" ph="SELECT count... id" />
+            <marker date="1493194821000" expanded="true" signature="4246:4447" ph="SELECT o.id organization" />
+            <marker date="1493194821000" expanded="true" signature="4705:5070" ph="INSERT INTO t_shop_account... " />
+            <marker date="1493194821000" expanded="true" signature="5151:5607" ph="UPDATE t_sho... " />
+            <marker date="1493194821000" expanded="true" signature="5700:6227" ph="INSERT INTO t_org_setting_his... " />
+            <marker date="1493194821000" expanded="true" signature="6216:6224" ph="SELECT t.org... t_org_setting" />
+            <marker date="1493194821000" expanded="true" signature="6216:6227" ph="INSERT INTO t_org_setting_his... " />
+            <marker date="1493194821000" expanded="true" signature="6455:6641" ph="UPDATE t_sho... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/PackageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <marker date="1492072753000" expanded="true" signature="326:479" ph="INSERT INTO t_package... " />
+            <marker date="1492072753000" expanded="true" signature="910:1291" ph="UPDATE t_pac... " />
+            <marker date="1492072753000" expanded="true" signature="1378:1588" ph="UPDATE t_pac... " />
+            <marker date="1492072753000" expanded="true" signature="1970:2019" ph="DELETE FROM " />
+            <marker date="1492072753000" expanded="true" signature="2133:2242" ph="SELECT id,na... t_package" />
+            <marker date="1492072753000" expanded="true" signature="2345:2676" ph="SELECT id,na... t_package" />
+            <marker date="1492072753000" expanded="true" signature="2792:3137" ph="SELECT id,na... t_package" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/ResourceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <marker date="1492065037000" expanded="true" signature="321:520" ph="INSERT INTO t_resource... " />
+            <marker date="1492065037000" expanded="true" signature="600:811" ph="UPDATE t_res... " />
+            <marker date="1492065037000" expanded="true" signature="890:1417" ph="UPDATE t_res... " />
+            <marker date="1492065037000" expanded="true" signature="1808:2158" ph="SELECT id,na... " />
+            <marker date="1492065037000" expanded="true" signature="2984:3112" ph="SELECT id,na... " />
+            <marker date="1492065037000" expanded="true" signature="3238:3577" ph="SELECT ts.id... t_resource" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/DistributionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/DistributionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="40" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-mapper/OrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="25" column="93" lean-forward="false" selection-start-line="25" selection-start-column="93" selection-end-line="25" selection-end-column="93" />
+          <folding>
+            <marker date="1493274449000" expanded="true" signature="283:3641" ph="SELECT t.ord... order_id" />
+            <marker date="1493274449000" expanded="true" signature="310:3352" ph="INSERT INTO t_order_status... " />
+            <marker date="1493274449000" expanded="true" signature="310:3632" ph="INSERT INTO t_order_status... " />
+            <marker date="1493274449000" expanded="true" signature="539:3352" ph="SELECT t.ord... order_id" />
+            <marker date="1493274449000" expanded="true" signature="1991:3335" ph="SELECT t.ord... order_id" />
+            <marker date="1493274449000" expanded="true" signature="2488:3128" ph="SELECT b.ord... business_order" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/OrgProductService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        <state relative-caret-position="293">
+          <caret line="65" column="4" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/aspect/WebLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/job/OrderJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gxq/mapper/OrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>

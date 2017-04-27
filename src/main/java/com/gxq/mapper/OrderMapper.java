@@ -7,6 +7,8 @@ import org.apache.ibatis.annotations.Mapper;
  */
 
 @Mapper
-public interface OrgerMapper {
+public interface OrderMapper {
+
+    int insertOrderStatus(String serverDate);
 
 }
