@@ -42,6 +42,14 @@ public class OrgProductService {
 
         List<OrgProductModel> list = orgProductMapper.selectOrgProcuct(model);
 
+
+        long i = pageNum+1;
+
+        for (OrgProductModel temp:list){
+            temp.setId(i);
+            i++;
+        }
+
         pageModel.setList(list);
 
         Long total = orgProductMapper.selectTotalCount(model);

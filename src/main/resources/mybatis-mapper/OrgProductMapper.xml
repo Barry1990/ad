@@ -187,7 +187,7 @@
 
 
     <resultMap type="com.gxq.model.OrgProductModel" id="orgProductMap">
-        <id property="orgId" column="org_id"/>
+        <result property="orgId" column="org_id"/>
         <result property="orgName" column="org_name"/>
         <result property="productId" column="product_id"/>
         <result property="productName" column="product_name"/>
