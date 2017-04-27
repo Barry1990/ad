@@ -21,7 +21,7 @@ public class OrderJob {
     @Autowired
     private OrderService orderService;
 
-    @Scheduled(cron = "0 0 1 * * ?") //每天凌晨1点结算
+    @Scheduled(cron = "0 57 15 * * ?") //每天凌晨1点结算
     public void scheduler() {
 
         int result = orderService.insertOrderStatus();

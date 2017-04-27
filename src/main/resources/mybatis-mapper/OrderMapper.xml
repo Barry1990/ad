@@ -12,6 +12,7 @@
             order_id ,
             wx_account ,
             ali_account ,
+            pay_channel ,
             wx_scale ,
             ali_scale ,
             price ,
@@ -20,7 +21,7 @@
         )
 
         SELECT
-            tt.order_id,tt.wx_account,tt.ali_account,tt.wxthird_scale,tt.alithird_scale,
+            tt.order_id,tt.wx_account,tt.ali_account,tt.pay_channel,tt.wxthird_scale,tt.alithird_scale,
 
                 CASE WHEN tt.pay_channel = 2 THEN (tt.pay_price * tt.wxthird_scale /10000.00)
                      WHEN tt.pay_channel = 3 THEN (tt.pay_price * tt.alithird_scale /10000.00)

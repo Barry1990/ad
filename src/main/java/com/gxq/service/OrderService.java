@@ -27,7 +27,7 @@ public class OrderService {
 
         String serverDate = df.format(new Date());
 
-        return orderMapper.insertOrderStatus(serverDate);
+        return orderMapper.insertOrderStatus("2017-04-03");
     }
 
 }

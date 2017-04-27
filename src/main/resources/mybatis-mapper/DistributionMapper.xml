@@ -42,40 +42,44 @@
     </insert>
 
     <select id="selectDistribution_Records" parameterType="SearchModel" resultMap="distributionRecordMap">
-            SELECT
-                *
+        SELECT
+            r.*,o.name as device_org
             FROM
+            (
+                SELECT
+                tdr.f_id ,
+                tdr.p_id ,
+                tdr.r_id ,
+                m.org_id,
+                tdr.create_time,
+                aa.u_id AS device_id ,
+                m.machine_name as device_name,
+                tp. NAME AS package_name ,
+                ts. NAME AS resource_name ,
+                aa.end_time
+
+                FROM
                 (
-                    SELECT
-                        tdr.f_id ,
-                        tdr.p_id ,
-                        tdr.r_id ,
-                        tdr.create_time,
-                        aa.u_id AS device_id ,
-                        tp. NAME AS package_name ,
-                        ts. NAME AS resource_name ,
-                        aa.end_time
-                    FROM
-                        (
-                            SELECT
-                                td.id ,
-                                td.u_id ,
-                                td.end_time
-                            FROM
-                                t_distribution td
-                            WHERE
-                                td.state = 1
-                            AND td.is_delete = 0
-                        ) aa
+                SELECT
+                    td.id ,
+                    td.u_id ,
+                    td.end_time
+                  FROM
+                    t_distribution td
+                  WHERE
+                    td.state = 1
+                    AND td.is_delete = 0
+                  ) aa
                     LEFT JOIN t_distribution_records tdr ON aa.id = tdr.f_id
                     LEFT JOIN t_package tp ON tdr.p_id = tp.id
                     LEFT JOIN t_resource ts ON tdr.r_id = ts.id
-                ) r
-            WHERE
-                1 = 1
-                <if test="name!=null"> AND r.package_name LIKE #{name} OR r.resource_name LIKE #{name} </if>
-                <if test="startTime!=null"><![CDATA[ AND r.create_time > #{startTime}]]> </if>
-                <if test="endTime!=null"><![CDATA[ AND r.create_time < #{endTime}]]> </if>
+                    LEFT JOIN machine m ON aa.u_id = m.id
+            ) r,organization o
+        WHERE
+        1 = 1 AND o.id = r.org_id
+        <if test="name!=null"> AND r.package_name LIKE #{name} OR r.resource_name LIKE #{name} </if>
+        <if test="startTime!=null"><![CDATA[ AND r.create_time > #{startTime}]]> </if>
+        <if test="endTime!=null"><![CDATA[ AND r.create_time < #{endTime}]]> </if>
     </select>
 
     <resultMap type="com.gxq.model.DistributionRecordModel" id="distributionRecordMap">
@@ -83,6 +87,8 @@
         <result property="pid" column="p_id"/>
         <result property="rid" column="r_id"/>
         <result property="deviceId" column="device_id"/>
+        <result property="deviceName" column="device_name"/>
+        <result property="deviceOrg" column="device_org"/>
         <result property="packageName" column="package_name"/>
         <result property="resourceName" column="resource_name"/>
         <result property="endTime" column="end_time"/>
