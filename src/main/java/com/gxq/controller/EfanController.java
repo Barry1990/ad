@@ -1,11 +1,7 @@
 package com.gxq.controller;
 
-import com.google.gson.Gson;
-import com.gxq.service.ResourceService;
 import com.gxq.util.HttpUtils;
 import com.gxq.util.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,8 +17,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class EfanController {
 
-    @Autowired
-    private ResourceService resourceService;
 
     static String baseUrl = "http://api.efanyun.com/api/";
 
@@ -86,10 +80,6 @@ public class EfanController {
         return result;
     }
 
-    @RequestMapping(value = "/getResources", method = RequestMethod.GET)
-    public String getResources(@RequestParam Long machineId){
-        ModelMap result = resourceService.getResourceByMachineId(machineId);
-        return new Gson().toJson(result);
-    }
+
 
 }

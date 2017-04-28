@@ -240,7 +240,7 @@ public class ResourceService {
 
         ModelMap result = new ModelMap();
 
-        List<ResourceModel> list = resourceMapper.selcectResourceByMachineId(machineId);
+        List<ResourceDisModel> list = resourceMapper.selcectResourceByMachineId(machineId);
 
         if (result != null){
             result.put("result", "1");
@@ -249,6 +249,27 @@ public class ResourceService {
         }else {
             result.put("result", "1");
             result.put("errorMsg", "获取失败!");
+        }
+
+        return result;
+    }
+
+    /**
+     * 更新广告资源
+     * @param recordId
+     * @return
+     */
+    @Transactional
+    public ModelMap updateRecordById(Long recordId){
+
+        ModelMap result = new ModelMap();
+
+        if (resourceMapper.updateRecordById(recordId) > 0){
+            result.put("result", "1");
+            result.put("errorMsg", "更新成功!");
+        }else {
+            result.put("result", "0");
+            result.put("errorMsg", "更新失败!");
         }
 
         return result;

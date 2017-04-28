@@ -85,9 +85,9 @@
         ORDER BY tpr.sorting ASC
     </select>
 
-    <select id="selcectResourceByMachineId" parameterType="java.lang.Long" resultMap="resourceMap">
-        SELECT
-            r. NAME ,
+    <select id="selcectResourceByMachineId" parameterType="java.lang.Long" resultMap="resourceDisMap">
+        SELECT t.id as record_id,
+            r.name ,
             r.type ,
             r.address ,
             CASE
@@ -114,6 +114,10 @@
         AND r.is_delete = 0
     </select>
 
+    <update id="updateRecordById" parameterType="java.lang.Long">
+          UPDATE t_distribution_records SET state = 1 WHERE id = #{recordId};
+    </update>
+
     <resultMap type="com.gxq.model.ResourceModel" id="resourceMap">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
@@ -124,6 +128,14 @@
         <result property="address" column="address"/>
         <result property="note" column="note"/>
         <result property="createTime" column="create_time"/>
+    </resultMap>
+
+    <resultMap type="com.gxq.model.ResourceDisModel" id="resourceDisMap">
+        <result property="recordId" column="record_id"/>
+        <result property="name" column="name"/>
+        <result property="time" column="time"/>
+        <result property="type" column="type"/>
+        <result property="address" column="address"/>
     </resultMap>
 
 </mapper>

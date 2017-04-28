@@ -1,5 +1,6 @@
 package com.gxq.mapper;
 
+import com.gxq.model.ResourceDisModel;
 import com.gxq.model.common.ChangeStateModel;
 import com.gxq.model.PublishSearchModel;
 import com.gxq.model.ResourceModel;
@@ -29,7 +30,11 @@ public interface ResourceMapper {
 
     List<ResourceModel> selectResourceListByPackageId(Long id);
 
-    List<ResourceModel> selcectResourceByMachineId(Long machineId);
-
     Long delete(List list);
+
+
+    /*-------------------------以下是为设备提供的接口------------------------------*/
+    List<ResourceDisModel> selcectResourceByMachineId(Long machineId);
+
+    int updateRecordById(Long id);
 }

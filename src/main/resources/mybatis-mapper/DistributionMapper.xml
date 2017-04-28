@@ -51,6 +51,7 @@
                 tdr.p_id ,
                 tdr.r_id ,
                 m.org_id,
+                tdr.state,
                 tdr.create_time,
                 aa.u_id AS device_id ,
                 m.machine_name as device_name,
