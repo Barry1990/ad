@@ -86,8 +86,8 @@ public class EfanController {
         return result;
     }
 
-    @RequestMapping(value = "/getResourceByMachineId", method = RequestMethod.POST)
-    public String getResourceByMachineId(@RequestParam Long machineId){
+    @RequestMapping(value = "/getResources", method = RequestMethod.GET)
+    public String getResources(@RequestParam Long machineId){
         ModelMap result = resourceService.getResourceByMachineId(machineId);
         return new Gson().toJson(result);
     }

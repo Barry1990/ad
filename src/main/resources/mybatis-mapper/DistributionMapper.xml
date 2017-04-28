@@ -13,7 +13,7 @@
 
     <update id="updateState" parameterType="ChangeStateModel">
         UPDATE t_distribution SET state = #{state}
-        WHERE id IN
+        WHERE u_id IN
         <foreach separator="," item="item" collection="list" close=")" open="(">
             #{item}
         </foreach>
