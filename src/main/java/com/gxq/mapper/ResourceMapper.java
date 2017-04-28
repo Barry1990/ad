@@ -27,7 +27,9 @@ public interface ResourceMapper {
 
     ResourceModel selectById(Long id);
 
-    List<ResourceModel> selectResouceListByPackageId(Long id);
+    List<ResourceModel> selectResourceListByPackageId(Long id);
+
+    List<ResourceModel> selcectResourceByMachineId(Long machineId);
 
     Long delete(List list);
 }

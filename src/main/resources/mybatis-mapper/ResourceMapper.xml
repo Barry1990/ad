@@ -72,7 +72,7 @@
         WHERE is_delete = 0 AND id = #{id}
     </select>
 
-    <select id="selectResouceListByPackageId" parameterType="java.lang.Long" resultMap="resourceMap">
+    <select id="selectResourceListByPackageId" parameterType="java.lang.Long" resultMap="resourceMap">
         SELECT ts.id ,ts.name ,ts.title ,ts.note ,ts.create_time ,ts.type ,ts.time ,ts.state
             FROM
             t_resource ts ,
@@ -83,6 +83,35 @@
             AND ts.is_delete = 0
             AND ts.state = 1
         ORDER BY tpr.sorting ASC
+    </select>
+
+    <select id="selcectResourceByMachineId" parameterType="java.lang.Long" resultMap="resourceMap">
+        SELECT
+            r. NAME ,
+            r.type ,
+            r.address ,
+            CASE
+        WHEN r.time IS NULL THEN
+            0
+        ELSE
+            r.time
+        END AS time
+        FROM
+            (
+                SELECT
+                    dr.*
+                FROM
+                    t_distribution d ,
+                    t_distribution_records dr
+                WHERE
+                    d.u_id = #{machineId}
+                AND dr.f_id = d.id
+                AND d.is_delete = 0
+                AND d.state = 1
+            ) t
+        LEFT JOIN t_resource r ON t.r_id = r.id
+        AND r.state = 1
+        AND r.is_delete = 0
     </select>
 
     <resultMap type="com.gxq.model.ResourceModel" id="resourceMap">

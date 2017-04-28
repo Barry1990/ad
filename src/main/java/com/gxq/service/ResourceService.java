@@ -224,6 +224,29 @@ public class ResourceService {
             result.put("errorMsg", "获取成功!");
             result.put("data", model);
         }else {
+            result.put("result", "0");
+            result.put("errorMsg", "获取失败!");
+        }
+
+        return result;
+    }
+
+    /**
+     * 通过设备id获取广告资源
+     * @param machineId
+     * @return
+     */
+    public ModelMap getResourceByMachineId(Long machineId) {
+
+        ModelMap result = new ModelMap();
+
+        List<ResourceModel> list = resourceMapper.selcectResourceByMachineId(machineId);
+
+        if (result != null){
+            result.put("result", "1");
+            result.put("errorMsg", "获取成功!");
+            result.put("data", list);
+        }else {
             result.put("result", "1");
             result.put("errorMsg", "获取失败!");
         }

@@ -131,7 +131,7 @@ public class PackageService {
 
         PackageModel packageModel = packageMapper.selectPackageById(id);
 
-        List<ResourceModel> resourceList = resourceMapper.selectResouceListByPackageId(id);
+        List<ResourceModel> resourceList = resourceMapper.selectResourceListByPackageId(id);
 
         if (packageModel != null){
             packageModel.setResources(resourceList);
