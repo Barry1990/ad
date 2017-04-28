@@ -1,4 +1,4 @@
-package com.gxq.model;
+package com.gxq.model.org;
 
 /**
  * Created by xuenianxiang on 2017/4/19.

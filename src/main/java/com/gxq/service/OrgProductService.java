@@ -1,11 +1,11 @@
 package com.gxq.service;
 
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
 import com.gxq.mapper.OrgProductMapper;
-import com.gxq.model.*;
+import com.gxq.model.org.OrgProductBatchModel;
+import com.gxq.model.org.OrgProductIdModel;
+import com.gxq.model.org.OrgProductModel;
+import com.gxq.model.org.OrgProductSearchModel;
 import com.gxq.model.page.OrgProductPageModel;
-import com.gxq.model.page.OrgSettingPageModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

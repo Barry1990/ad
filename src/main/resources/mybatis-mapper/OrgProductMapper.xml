@@ -186,7 +186,7 @@
     </select>
 
 
-    <resultMap type="com.gxq.model.OrgProductModel" id="orgProductMap">
+    <resultMap type="com.gxq.model.org.OrgProductModel" id="orgProductMap">
         <result property="orgId" column="org_id"/>
         <result property="orgName" column="org_name"/>
         <result property="productId" column="product_id"/>

@@ -3,8 +3,8 @@ package com.gxq.service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.gxq.mapper.DistributionMapper;
-import com.gxq.model.DistributionInsertModel;
-import com.gxq.model.DistributionModel;
+import com.gxq.model.distribution.DistributionInsertModel;
+import com.gxq.model.distribution.DistributionModel;
 import com.gxq.model.MachineSearchModel;
 import com.gxq.model.common.ChangeStateModel;
 import com.gxq.model.common.SearchModel;
@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package com.gxq.model;
+package com.gxq.model.distribution;
 
 import com.gxq.model.base.BaseModel;
 

@@ -1,8 +1,8 @@
 package com.gxq.mapper;
 
-import com.gxq.model.OrgSettingBatchModel;
-import com.gxq.model.OrgSettingModel;
-import com.gxq.model.OrgSettingSearchModel;
+import com.gxq.model.org.OrgSettingBatchModel;
+import com.gxq.model.org.OrgSettingModel;
+import com.gxq.model.org.OrgSettingSearchModel;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

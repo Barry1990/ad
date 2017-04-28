@@ -1,7 +1,7 @@
 package com.gxq.controller;
 
-import com.gxq.model.OrgProductBatchModel;
-import com.gxq.model.OrgProductSearchModel;
+import com.gxq.model.org.OrgProductBatchModel;
+import com.gxq.model.org.OrgProductSearchModel;
 import com.gxq.model.page.OrgProductPageModel;
 import com.gxq.service.OrgProductService;
 import org.springframework.beans.factory.annotation.Autowired;

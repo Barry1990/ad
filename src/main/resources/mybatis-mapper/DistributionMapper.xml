@@ -83,7 +83,7 @@
         <if test="endTime!=null"><![CDATA[ AND r.create_time < #{endTime}]]> </if>
     </select>
 
-    <resultMap type="com.gxq.model.DistributionRecordModel" id="distributionRecordMap">
+    <resultMap type="com.gxq.model.distribution.DistributionRecordModel" id="distributionRecordMap">
         <result property="fid" column="f_id"/>
         <result property="pid" column="p_id"/>
         <result property="rid" column="r_id"/>

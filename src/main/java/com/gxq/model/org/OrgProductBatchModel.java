@@ -1,4 +1,4 @@
-package com.gxq.model;
+package com.gxq.model.org;
 
 import java.util.List;
 

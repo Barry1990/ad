@@ -169,7 +169,7 @@
     </update>
 
 
-    <resultMap type="com.gxq.model.OrgSettingModel" id="orgSettingMap">
+    <resultMap type="com.gxq.model.org.OrgSettingModel" id="orgSettingMap">
         <id property="orgId" column="org_id"/>
         <result property="orgName" column="org_name"/>
         <result property="wxAccount" column="wx_account"/>

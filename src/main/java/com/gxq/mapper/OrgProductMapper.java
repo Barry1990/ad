@@ -1,7 +1,7 @@
 package com.gxq.mapper;
 
-import com.gxq.model.OrgProductModel;
-import com.gxq.model.OrgProductSearchModel;
+import com.gxq.model.org.OrgProductModel;
+import com.gxq.model.org.OrgProductSearchModel;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

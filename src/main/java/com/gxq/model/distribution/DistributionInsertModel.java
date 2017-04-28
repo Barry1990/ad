@@ -1,4 +1,4 @@
-package com.gxq.model;
+package com.gxq.model.distribution;
 
 import io.swagger.models.auth.In;
 

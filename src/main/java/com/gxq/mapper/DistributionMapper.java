@@ -1,7 +1,7 @@
 package com.gxq.mapper;
 
-import com.gxq.model.DistributionModel;
-import com.gxq.model.DistributionRecordModel;
+import com.gxq.model.distribution.DistributionModel;
+import com.gxq.model.distribution.DistributionRecordModel;
 import com.gxq.model.MachineModel;
 import com.gxq.model.MachineSearchModel;
 import com.gxq.model.common.ChangeStateModel;

@@ -1,6 +1,6 @@
 package com.gxq.controller;
 
-import com.gxq.model.DistributionInsertModel;
+import com.gxq.model.distribution.DistributionInsertModel;
 import com.gxq.model.MachineSearchModel;
 import com.gxq.model.common.ChangeStateModel;
 import com.gxq.model.common.SearchModel;

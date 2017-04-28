@@ -101,4 +101,31 @@
     ]]>
     </insert>
 
+
+    <select id="selectAliTurnPriceList" parameterType="java.lang.String">
+        SELECT
+            o.ali_account as account,
+            SUM(turn_price) AS turn_price
+        FROM
+            t_order_status o
+        WHERE
+            DATE_FORMAT(o.pay_date , '%Y-%m-%d') = #{serverDate}
+        AND o.pay_channel = 3
+        GROUP BY
+            o.ali_account
+    </select>
+
+    <select id="selectWXTurnPriceList" parameterType="java.lang.String">
+        SELECT
+            o.wx_account as account,
+            SUM(turn_price) AS turn_price
+        FROM
+            t_order_status o
+        WHERE
+            DATE_FORMAT(o.pay_date , '%Y-%m-%d') = #{serverDate}
+        AND o.pay_channel = 2
+        GROUP BY
+            o.wx_account
+    </select>
+
 </mapper>
