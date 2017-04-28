@@ -15,7 +15,9 @@
             pay_channel ,
             wx_scale ,
             ali_scale ,
-            price ,
+            pay_price ,
+            turn_price ,
+            over_price ,
             pay_date,
             status
         )
@@ -23,9 +25,15 @@
         SELECT
             tt.order_id,tt.wx_account,tt.ali_account,tt.pay_channel,tt.wxthird_scale,tt.alithird_scale,
 
+                tt.pay_price/100.0 as pay_price,
+
                 CASE WHEN tt.pay_channel = 2 THEN (tt.pay_price * tt.wxthird_scale /10000.00)
                      WHEN tt.pay_channel = 3 THEN (tt.pay_price * tt.alithird_scale /10000.00)
-                 END AS  price,
+                 END AS  turn_price,
+
+                CASE WHEN tt.pay_channel = 2 THEN (tt.pay_price * (100 - tt.wxthird_scale) /10000.00)
+                     WHEN tt.pay_channel = 3 THEN (tt.pay_price * (100 - tt.alithird_scale) /10000.00)
+                 END AS  over_price,
 
                  CASE
                 WHEN tt.period_type = 1 THEN
@@ -83,8 +91,8 @@
                 LEFT JOIN t_product_scale ps ON ps.org_id = t.org_id
                 AND ps.product_id = t.product_id
             ) tt
-            WHERE  tt.wx_account IS NOT NULL
-              AND  tt.ali_account IS NOT NULL
+              WHERE  tt.wx_account IS NOT NULL AND tt.wx_account != ''
+              AND  tt.ali_account IS NOT NULL AND tt.ali_account != ''
               AND  tt.period_type IS NOT NULL
               AND  tt.period_time IS NOT NULL
               AND  tt.alithird_scale IS NOT NULL
