@@ -104,6 +104,20 @@
 			<version>2.3.1</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<!-- alipay-sdk 在本地mvn仓库中 -->
+		<dependency>
+			<groupId>com.alipay</groupId>
+			<artifactId>sdk-java</artifactId>
+			<version>20170411150054</version>
+		</dependency>
+
 		<!--Test-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
