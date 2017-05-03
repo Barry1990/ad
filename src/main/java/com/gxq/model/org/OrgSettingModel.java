@@ -109,12 +109,12 @@ public class OrgSettingModel extends BaseModel implements Serializable {
 
     public String getPeriodDes() {
 
-        if (this.getPeriodType()==1){
+        if (this.getPeriodType()!=null && this.getPeriodType()==1){
             return "T+"+this.getPeriodTime();
-        }else if (this.getPeriodType()==2){
+        }else if (this.getPeriodType()!=null && this.getPeriodType()==2){
             return "次月"+this.getPeriodTime()+"日";
         }else {
-            return "";
+            return null;
         }
     }
 

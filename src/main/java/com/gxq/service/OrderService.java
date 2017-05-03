@@ -30,4 +30,9 @@ public class OrderService {
         return orderMapper.insertOrderStatus("2017-04-03");
     }
 
+//    public void pay(){
+//        AlipayClient alipayClient = new DefaultAlipayClient("https://openapi.alipay.com/gateway.do","app_id","your private_key","json","GBK","alipay_public_key","RSA2");
+//
+//    }
+
 }
