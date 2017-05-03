@@ -105,7 +105,7 @@
     <select id="selectAliTurnPriceList" parameterType="java.lang.String">
         SELECT
             o.ali_account as account,
-            SUM(turn_price) AS turn_price
+            SUM(turn_price) AS amount
         FROM
             t_order_status o
         WHERE
@@ -118,7 +118,7 @@
     <select id="selectWXTurnPriceList" parameterType="java.lang.String">
         SELECT
             o.wx_account as account,
-            SUM(turn_price) AS turn_price
+            SUM(turn_price) AS amount
         FROM
             t_order_status o
         WHERE

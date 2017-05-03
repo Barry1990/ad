@@ -5,15 +5,24 @@ import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.request.AlipayFundTransToaccountTransferRequest;
 import com.alipay.api.response.AlipayFundTransToaccountTransferResponse;
+import com.google.gson.Gson;
 import com.gxq.mapper.OrderMapper;
 import com.gxq.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by xuenianxiang on 2017/4/27.
@@ -50,19 +59,31 @@ public class OrderService {
         return orderMapper.insertOrderStatus(serverDate);
     }
 
+    public void pay(){
+
+        //查询
+
+        //支付
+
+        //更新表
+
+    }
+
     public void alipay(String account, float amount){
 
         AlipayClient alipayClient = new DefaultAlipayClient("https://openapi.alipay.com/gateway.do","app_id","your private_key","json","GBK","alipay_public_key","RSA2");
         AlipayFundTransToaccountTransferRequest request = new AlipayFundTransToaccountTransferRequest();
-        request.setBizContent("{" +
-                "    \"out_biz_no\":\"3142321423432\"," +
-                "    \"payee_type\":\"ALIPAY_LOGONID\"," +
-                "    \"payee_account\":\"abc@sina.com\"," +
-                "    \"amount\":\"12.23\"," +
-                "    \"payer_show_name\":\"Efan转账\"," +
-                "    \"payee_real_name\":\"地主\"," +
-                "    \"remark\":\"转账备注\"," +
-                "  }");
+
+        Map<String, String> parm = new HashMap<String, String>();
+        parm.put("out_biz_no", PayUtil.getTransferNo());
+        parm.put("payee_type", "ALIPAY_LOGONID");
+        parm.put("payee_account", account);
+        parm.put("amount", amount+"");
+        parm.put("payer_show_name", "Efan支付宝转账");
+        parm.put("payee_real_name", "地主");
+        parm.put("remark", "转账备注");
+
+        request.setBizContent(new Gson().toJson(parm));
 
         try {
             AlipayFundTransToaccountTransferResponse response = alipayClient.execute(request);
@@ -89,9 +110,9 @@ public class OrderService {
             parm.put("partner_trade_no", PayUtil.getTransferNo()); //商户订单号
             parm.put("openid", openid); //用户openid
             parm.put("check_name", "NO_CHECK"); //校验用户姓名选项 OPTION_CHECK
-            parm.put("amount", "100"); //转账金额
-            parm.put("desc", "测试转账到个人"); //企业付款描述信息
-            parm.put("spbill_create_ip", "192.168.1.1"); //Ip地址
+            parm.put("amount", amount+""); //转账金额
+            parm.put("desc", "Efan微信转账"); //企业付款描述信息
+            parm.put("spbill_create_ip", getV4IP()); //Ip地址
             parm.put("sign", PayUtil.getSign(parm, API_SECRET));
 
             String restxml = HttpUtils.posts(TRANSFERS_PAY, XmlUtil.xmlFormat(parm, false));
@@ -111,8 +132,49 @@ public class OrderService {
             if (CollectionUtil.isNotEmpty(restmap)) {
                 //LOG.info("转账失败：" + restmap.get("err_code") + ":" + restmap.get("err_code_des"));
             }
-
         }
+    }
+
+    //获取公网ip
+    public static String getV4IP(){
+        String ip = "";
+        String chinaz = "http://ip.chinaz.com";
+
+        StringBuilder inputLine = new StringBuilder();
+        String read = "";
+        URL url = null;
+        HttpURLConnection urlConnection = null;
+        BufferedReader in = null;
+        try {
+            url = new URL(chinaz);
+            urlConnection = (HttpURLConnection) url.openConnection();
+            in = new BufferedReader( new InputStreamReader(urlConnection.getInputStream(),"UTF-8"));
+            while((read=in.readLine())!=null){
+                inputLine.append(read+"\r\n");
+            }
+            //System.out.println(inputLine.toString());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally{
+            if(in!=null){
+                try {
+                    in.close();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        Pattern p = Pattern.compile("\\<dd class\\=\"fz24\">(.*?)\\<\\/dd>");
+        Matcher m = p.matcher(inputLine.toString());
+        if(m.find()){
+            String ipstr = m.group(1);
+            ip = ipstr;
+        }
+        return ip;
     }
 
 }
