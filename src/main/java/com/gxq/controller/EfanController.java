@@ -2,8 +2,8 @@ package com.gxq.controller;
 
 import com.google.gson.Gson;
 import com.gxq.service.ResourceService;
-import com.gxq.util.HttpUtils;
-import com.gxq.util.StringUtils;
+import com.gxq.util.StringUtil;
+import com.gxq.util.HttpUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,9 +33,9 @@ public class EfanController {
 
         String url= baseUrl + "login?";
 
-        String result = HttpUtils.sendPost(url,"user_name="+ userName+"&pw="+pw);
+        String result = HttpUtil.sendPost(url,"user_name="+ userName+"&pw="+pw);
 
-        return StringUtils.decodeUnicode(result);
+        return StringUtil.decodeUnicode(result);
     }
 
     @RequestMapping(value = "/getOrgRoot", method = RequestMethod.POST)
@@ -43,9 +43,9 @@ public class EfanController {
 
         String url= baseUrl +"getOrgRoot?";
 
-        String result = HttpUtils.sendPost(url,"");
+        String result = HttpUtil.sendPost(url,"");
 
-        return StringUtils.decodeUnicode(result);
+        return StringUtil.decodeUnicode(result);
     }
 
     @RequestMapping(value = "/getOrgOperators", method = RequestMethod.POST)
@@ -53,9 +53,9 @@ public class EfanController {
 
         String url= baseUrl+"getOrgOperators?";
 
-        String result = HttpUtils.sendPost(url,"org_id="+orgId);
+        String result = HttpUtil.sendPost(url,"org_id="+orgId);
 
-        return StringUtils.decodeUnicode(result);
+        return StringUtil.decodeUnicode(result);
     }
 
     @RequestMapping(value = "/getOrgList", method = RequestMethod.POST)
@@ -63,9 +63,9 @@ public class EfanController {
 
         String url = baseUrl + "getOrgList?";
 
-        String result = HttpUtils.sendPost(url, "org_id=" + orgId);
+        String result = HttpUtil.sendPost(url, "org_id=" + orgId);
 
-        return StringUtils.decodeUnicode(result);
+        return StringUtil.decodeUnicode(result);
     }
 
     @RequestMapping(value = "/getOrgChildren", method = RequestMethod.POST)
@@ -73,9 +73,9 @@ public class EfanController {
 
         String url = baseUrl + "getOrgChildren?";
 
-        String result = HttpUtils.sendPost(url, "org_id=" + orgId);
+        String result = HttpUtil.sendPost(url, "org_id=" + orgId);
 
-        return StringUtils.decodeUnicode(result);
+        return StringUtil.decodeUnicode(result);
     }
 
     @RequestMapping(value = "/getWxToken", method = RequestMethod.POST)
@@ -83,7 +83,7 @@ public class EfanController {
 
         String url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxae73861a343f7fd6&secret=8b2fbb7b931ab6830626e65b2586b74a&code="+code+"&grant_type=authorization_code";
 
-        String result = HttpUtils.sendPost(url,"");
+        String result = HttpUtil.sendPost(url,"");
 
         return result;
     }
