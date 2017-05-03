@@ -1,6 +1,7 @@
 package com.gxq;
 
 import com.google.common.base.Predicate;
+import com.gxq.controller.EfanController;
 import org.springframework.boot.autoconfigure.web.BasicErrorController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,13 +30,21 @@ public class Swagger2 {
             @Override
             public boolean apply(RequestHandler input) {
                 Class<?> declaringClass = input.declaringClass();
-                if (declaringClass == BasicErrorController.class)// 排除
+
+                if (declaringClass == EfanController.class){
+                    return true;
+                }else {
                     return false;
-                if(declaringClass.isAnnotationPresent(RestController.class)) // 被注解的类
-                    return true;
-                if(input.isAnnotatedWith(ResponseBody.class)) // 被注解的方法
-                    return true;
-                return false;
+                }
+
+
+//                if (declaringClass == BasicErrorController.class)// 排除
+//                    return false;
+//                if(declaringClass.isAnnotationPresent(RestController.class)) // 被注解的类
+//                    return true;
+//                if(input.isAnnotatedWith(ResponseBody.class)) // 被注解的方法
+//                    return true;
+//                return false;
             }
         };
 
